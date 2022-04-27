@@ -1,0 +1,184 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Font weight =====*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*===== Colors =====*/
+  --first-color: #457280;
+  --second-color: #c4c4c4;
+  --text-color: #0f1111;
+
+  /*===== Font and typography =====*/
+  --body-font: 'Poppins', sans-serif;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+/* button default */
+.button {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: var(--first-color);
+  border-radius: 30px;
+  border: 1px solid white;
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+}
+
+.button a:hover {
+  color: white;
+}
+/* end button */
+/* Start Dropdown Filtering */
+.btn-secondary {
+  padding: 0 30px !important;
+  background-color: var(--second-color) !important;
+  border: none !important;
+  border-radius: 30px !important;
+}
+/* End Dropdown Filtering  */
+/* Start form */
+.form {
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #88888852;
+}
+
+.title-form {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.input-form {
+  border-radius: 30px;
+  border: 0;
+  padding: 5px 20px;
+  width: 80%;
+  display: block;
+  box-shadow: 5px 10px 18px #88888852;
+  margin: 20px auto;
+}
+
+input:focus {
+  outline: var(--first-color) solid 2px;
+}
+
+.button-submit {
+  display: inline-block;
+  border: 1px solid white;
+  background-color: var(--first-color);
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bolder;
+  float: right;
+  clear: right;
+  margin-right: 50px;
+}
+/* end form */
+/* start-card */
+.explore-items {
+  margin: 32px auto auto;
+  text-align: left;
+  width: 1000px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.explore-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  transition: transform 0.3s;
+}
+
+.explore-item:hover {
+  transform: scale(0.97);
+}
+
+.explore-item .a {
+  text-decoration: none;
+  color: unset;
+}
+
+.explore-item__thumbnail {
+  width: 100%;
+}
+
+.explore-item__content {
+  padding: 16px 16px 32px 16px;
+  text-align: left;
+}
+
+.explore-item__title {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 16px;
+  transition: 0.3s opacity;
+}
+
+.explore-item__description {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.explore-item__content-title {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.explore-item__ratings {
+  text-align: center;
+}
+.img-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  max-height: 600px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.explore-item__rating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: large;
+  border-radius: 0 0 20px 0;
+  background-color: #1a374d;
+  padding: 0.4em 1.3em;
+  z-index: 1;
+}
+
+.explore-item__rating .fa {
+  font-size: smaller;
+  padding: 0.3em 0.8em 0.3em 0;
+  color: white;
+}
+/* end card */
