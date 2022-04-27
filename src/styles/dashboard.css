@@ -18,6 +18,11 @@
   --z-fixed: 100;
 }
 
+.button {
+  background-color: var(--first-color) !important;
+  border: transparent !important;
+}
+
 /* Start Sidebar */
 .sidebar {
   background-color: var(--first-color);
@@ -26,6 +31,7 @@
 .nav {
   display: flex;
   align-items: center;
+  height: 96vh;
 }
 
 .nav-link {

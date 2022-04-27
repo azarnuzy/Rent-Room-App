@@ -195,8 +195,61 @@ ul.main_nav_list {
   background-color: var(--second-color);
 }
 
-/* End Hero */
+.hero-login {
+  min-height: 94vh;
+  background-image: linear-gradient(
+      115deg,
+      rgba(230, 230, 230, 0.6),
+      rgba(177, 177, 177, 0.8)
+    ),
+    url(../images/Isola.jpg);
+}
 
+.left-login img {
+  width: 400px;
+}
+
+/* End Hero */
+/* Start form */
+.form {
+  width: 400px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 30px 0;
+}
+
+.title-form {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.input-form {
+  border-radius: 30px;
+  border: 0;
+  padding: 5px 20px;
+  width: 80%;
+  display: block;
+  margin: 20px auto;
+}
+
+input:focus {
+  outline: var(--first-color) solid 2px;
+}
+
+.button-submit {
+  display: inline-block;
+  border: 1px solid white;
+  background-color: var(--first-color);
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bolder;
+  float: right;
+  clear: right;
+  margin-right: 50px;
+}
+/* end form */
 /* Start Denah */
 /* The container must be positioned relative: */
 .custom-select {
