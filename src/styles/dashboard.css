@@ -61,3 +61,13 @@
 .content-title {
   margin: 100px 0 0 40px;
 }
+
+.filter-tgl {
+  border-radius: 30px;
+  border: 2px solid var(--first-color);
+  padding: 3px 5px;
+}
+
+.detail-explore__info li {
+  list-style: none;
+}
