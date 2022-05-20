@@ -1,0 +1,35 @@
+/* Hp/Tablet/PC */
+@media screen and (max-width: 1280px) {
+  .header_content {
+    padding-right: 20px;
+  }
+
+  .section {
+    width: 100vw !important;
+  }
+}
+/* Handphone */
+@media only screen and (max-width: 480px) {
+}
+
+/* Handphone/Tablet */
+@media screen and (min-width: 480px) {
+}
+
+/* Tablet */
+@media screen and (min-width: 720px) {
+}
+
+/* Tablet/PC */
+@media screen and (min-width: 992px) {
+}
+/* PC */
+@media only screen and (min-width: 1280px) {
+  .section:nth-child(1) {
+    max-width: 520px;
+  }
+
+  .section:nth-child(2) {
+    max-width: 640px;
+  }
+}

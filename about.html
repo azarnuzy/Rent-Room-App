@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Sistem Informasi Peminjaman Ruangan Kampus"
+    />
+    <meta name="keywords" content="Peminjaman Ruangan Kampus" />
+    <meta name="theme-color" content="#1A374D" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/responsive.css" />
+    <link rel="stylesheet" href="./src/styles/about.css">
+    <link rel="stylesheet" href="./src/styles/normalize.css" />
+    <link rel="stylesheet" href="./src/styles/landingPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>SiManuk App</title>
+  </head>
+  <body>
+    <!-- Start Navbar -->
+    <header class="header d-flex justify-content-center">
+      <div class="header_content d-flex flex-row align-items-center">
+        <a href="./index.html">
+          <div class="logo_container">
+            <div class="logo">
+              <img src="./src/images/Logo+.png" alt="LOGO" />
+            </div>
+          </div>
+        </a>
+        <div class="main_nav_container">
+          <div class="main_nav">
+            <ul class="main_nav_list">
+              <li class="main_nav_item">
+                <a href="./index.html#">Beranda</a>
+              </li>
+              <li class="main_nav_item">
+                <a href="./about.html">Tentang</a>
+              </li>
+              <li class="main_nav_item">
+                <a href="./bantuan.html">Bantuan</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sign_in">
+          <a href="./login.html">Masuk</a>
+        </div>
+    </header>
+    <!-- End Navbar -->
+    <!-- Start Hero -->
+    <div class="hero hero-about">
+      <div class="hero__inner container">
+        <div class="hero-description text-center">
+            <h2>TENTANG SIMANUK</h2>
+            <p>
+              Aplikasi <span><b>Sistem Informasi Peminjaman Ruangan di Lingkungan Kampus (SiManuk)</b></span> merupakan aplikasi real-time berbasis website. 
+              Aplikasi ini menampilkan ketersediaan ruangan serta informasi mendetail lainnya mengenai ruangan yang sedang dan akan dipinjam dalam suatu gedung. 
+              Aplikasi ini ditujukan bagi internal (dosen dan mahasiswa) dan eksternal (tamu/guest).
+            </p>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero -->
+    <!-- Start Description About -->
+    <div class="description-about container">
+        <div class="upper-content d-flex flex-wrap my-4">
+            <div class="section section-1 mx-3" style="width: 30vw;">
+                <h1 class="title-section text-center">LATAR BELAKANG</h1>
+                <div class="section-description">
+                  Salah satu sarana dan prasarana di lingkungan kampus adalah ruangan kelas. 
+                  Akan tetapi, terkadang ruangan kelas yang tersedia belum dapat digunakan secara efektif dan umumnya hanya digunakan untuk keperluan jadwal kuliah. 
+                  Untuk mengefektifkan penjadwalan ruangan dan bisa digunakan untuk berbagai kegiatan, 
+                  maka dibuatlah aplikasi web berupa peminjaman ruangan di lingkungan kampus khususnya di gedung FPMIPA-C.
+                </div>
+            </div>
+            <div class="section mx-3" style="width: 40vw;">
+                <h1 class="title-section text-center">TUJUAN</h1>
+                <div class="section-description">
+                  Aplikasi sistem peminjaman ruangan ini bertujuan untuk mengetahui ruangan apa saja yang sedang dan akan digunakan pada jadwal yang disediakan pada hari tersebut. 
+                  Selain itu, aplikasi ini juga membantu para mahasiswa baru ataupun tamu dari luar kampus yang kurang bahkan tidak mengetahui letak dari suatu ruangan dalam gedung. 
+                  Informasi seperti penanggung jawab peminjam ruangan, ruangan yang dipakai, tujuan pemakaian ruangan, jadwal asli pemakaian ruangan, dan lama waktu ruangan dipinjam juga dapat dilihat melalui aplikasi. 
+                  Tentu hal ini mempermudah para pengakses gedung agar tidak perlu mengecek ruangan satu persatu.
+                </div>
+            </div>
+        </div>
+        <div class="lower-content">
+            <h1 class="text-center">LOKASI</h1>
+            <div class="mapouter m-auto my-4 mb-5">
+              <div class="gmap_canvas">
+                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=universitas%20pendidikan%20indonesia%20FPMIPA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <a href="https://123movies-to.org"></a><br>
+                <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
+                <a href="https://www.embedgooglemap.net">google map website</a>
+                <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Description About -->
+    <!-- Start Our Team -->
+    <div class="bg-light">
+      <h1 class="text-center p-4">TIM KITA</h1>
+      <div class="row px-5 pb-5">
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Zakaria">
+              <h5 class="text-center mt-2">M. Zakaria S.</h5>
+              <p class="text-center">2007993</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Rahma">
+              <h5 class="text-center mt-2">Rahma Maulida</h5>
+              <p class="text-center">2003688</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Azar">
+              <h5 class="text-center mt-2">M. Azar Nuzy</h5>
+              <p class="text-center">2004191</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Sekar">
+              <h5 class="text-center mt-2">Sekar Madu K.</h5>
+              <p class="text-center">2007703</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Ahmad">
+              <h5 class="text-center mt-2">Hilman Ahmad R.</h5>
+              <p class="text-center">2007325</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Our Team -->
+    <!-- Start Footer -->
+    <footer class="footer d-flex justify-content-center">
+      <div class="container">
+        &copy; Copyright <strong><span>SiManuk</span></strong
+        >. All Rights Reserved
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="./src/script/index.js"></script>
+  </body>
+</html>

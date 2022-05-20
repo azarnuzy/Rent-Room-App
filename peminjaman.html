@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Sistem Informasi Peminjaman Ruangan Kampus" />
+  <meta name="keywords" content="Peminjaman Ruangan Kampus" />
+  <meta name="theme-color" content="#1A374D" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="./src/styles/index.css" />
+  <link rel="stylesheet" href="./src/styles/responsive.css" />
+  <link rel="stylesheet" href="./src/styles/normalize.css" />
+  <link rel="stylesheet" href="./src/styles/landingPage.css" />
+  <link rel="stylesheet" href="./src/styles/dashboard.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <title>SiManuk App</title>
+</head>
+
+<body>
+  <!-- Start Navbar -->
+  <header class="header d-flex justify-content-center">
+    <div class="header_content d-flex flex-row align-items-center">
+      <a href="#">
+        <div class="logo_container">
+          <div class="logo">
+            <img src="./src/images/Logo+.png" alt="LOGO" />
+          </div>
+        </div>
+      </a>
+      <div class="main_nav_container">
+        <div class="main_nav">
+          <ul class="main_nav_list">
+            <li class="main_nav_item">
+              <a href="./index.html#">Beranda</a>
+            </li>
+            <li class="main_nav_item">
+              <a href="./about.html">Tentang</a>
+            </li>
+            <li class="main_nav_item">
+              <a href="./bantuan.html">Bantuan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="sign_in">
+        <a href="#">M. Azar Nuzy</a>
+      </div>
+  </header>
+  <!-- End Navbar -->
+  <main>
+    <div class="row m-0 sidebar-container">
+      <!-- Start Sidebar -->
+      <div class=" col-md-2 col-6 p-0 sidebar">
+        <ul class="nav flex-column ">
+          <li class="nav-item">
+            <a class="nav-link" href="./admin.html">Daftar Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./user.html">Daftar User</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ruangan.html">Daftar Ruangan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./peminjaman.html">Daftar Peminjaman</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./tempPeminjaman.html">Daftar Peminjaman Sementara</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Sidebar -->
+      <!-- Main Content -->
+      <div class="col-md-10 p-0">
+        <h2 class="content-title text-center">Daftar Peminjaman</h2>
+        <!-- tambahkan content disini! -->
+        <div class="card-body text-end">
+          <a class="btn btn-primary mb-3 button" href="./addDosen.php" role="button">Pinjam</a>
+          <div class="table-responsive">
+            <table class="table table-hover table-stripped table-bordered text-center">
+              <thead class="table-info">
+                <tr>
+                  <th scope="row">No.</th>
+                  <th scope="row">Peminjam</th>
+                  <th scope="row">Kode Ruangan</th>
+                  <th scope="row">Waktu Awal Pinjam</th>
+                  <th scope="row">Waktu Akhir Pinjam</th>
+                  <th scope="row">Tujuan Peminjaman</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><?= $no ?></th>
+                  <td><?= $row['nip_dosen'] ?></td>
+                  <td><?= $row['nama_dosen'] ?></td>
+                  <td><?= $row['tempat_lahir_dosen'] ?></td>
+                  <td><?= $row['nama_dosen'] ?></td>
+                  <td><?= $row['tempat_lahir_dosen'] ?></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Main Content -->
+    </div>
+  </main>
+  <!-- Start Footer -->
+  <footer class="footer d-flex justify-content-center">
+    <div class="container">
+      &copy; Copyright <strong><span>SiManuk</span></strong>. All Rights Reserved
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <script src="./src/script/index.js"></script>
+</body>
+
+</html>
