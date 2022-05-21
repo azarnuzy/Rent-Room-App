@@ -1,0 +1,340 @@
+/*===== VARIABLES CSS =====*/
+:root {
+    /*===== Font weight =====*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*===== Colors =====*/
+    --first-color: #457280;
+    --second-color: #c4c4c4;
+    --text-color: #0f1111;
+
+    /*===== Font and typography =====*/
+    --body-font: "Poppins", sans-serif;
+
+    /*===== z index =====*/
+    --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    background-color: var(--first-color-lighten);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*start navbar */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    z-index: 100;
+    border-radius: 5px;
+    transition: all 200ms ease;
+}
+
+.scroll-header {
+    top: 0;
+    width: 100% !important;
+}
+
+.header_content {
+    width: 1280px;
+    height: 100%;
+}
+
+.header_content::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0px 20px 49px rgb(0 0 0 / 67%);
+    z-index: -1;
+}
+
+.logo_container {
+    display: inline-block;
+}
+
+.logo img {
+    width: 220px;
+    vertical-align: middle;
+    border-style: none;
+    margin-bottom: 10px;
+}
+
+.main_nav_container {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.main_nav {
+    margin-top: 7px;
+}
+
+ul.main_nav_list {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.main_nav_item {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.main_nav_item a {
+    font-size: 14px;
+    text-decoration: none;
+    text-shadow: rgb(0 0 0 / 1%) 0 0 1px;
+    font-weight: 700;
+    color: #3a3a3a;
+    transition: all 200ms ease;
+}
+
+.main_nav_item a:hover {
+    color: var(--first-color);
+}
+
+.sign_in {
+    padding: 5px 15px;
+    background-color: var(--first-color);
+    border-radius: 30px;
+    border: 1px solid white;
+}
+
+.sign_in a {
+    text-decoration: none;
+    color: white;
+    font-weight: var(--font-bold);
+}
+
+.sign_in a:hover {
+    color: white;
+}
+/* end navbar */
+/* Start Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+    width: 100%;
+    text-align: center;
+    background-position: top;
+    background-image: linear-gradient(
+            115deg,
+            rgba(230, 230, 230, 0.1),
+            rgba(177, 177, 177, 0.2)
+        ),
+        url(../img/Isola.jpg);
+}
+
+.hero__inner {
+    margin-top: 50px;
+}
+
+.hero-description {
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 58, 0.8),
+        rgba(10, 10, 10, 0.6)
+    );
+    color: white;
+    text-align: left;
+    padding: 30px 10px;
+    width: fit-content;
+    border-radius: 40px;
+}
+
+.hero-about {
+    min-height: 400px;
+}
+
+/* Description about */
+.section {
+    padding: 30px;
+}
+
+.section-1 {
+    background-color: var(--second-color);
+}
+
+/* Description Bantuan */
+.hero-bantuan {
+    min-height: 300px;
+}
+
+.list-tahapan {
+    background-color: var(--second-color);
+}
+
+.hero-login {
+    min-height: 94vh;
+    background-image: linear-gradient(
+            115deg,
+            rgba(230, 230, 230, 0.6),
+            rgba(177, 177, 177, 0.8)
+        ),
+        url(../img/Isola.jpg);
+}
+
+.right-login {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5%;
+}
+
+.left-login {
+    margin-right: 20px;
+}
+
+.left-login img {
+    width: 400px;
+}
+
+/* End Hero */
+/* Start form */
+.form {
+    width: 380px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding-top: 0;
+    padding-bottom: 80px;
+}
+
+.title-form {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.input-form {
+    border-radius: 30px;
+    border: 0;
+    padding: 5px 20px;
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+}
+
+input:focus {
+    outline: var(--first-color) solid 2px;
+}
+
+.button-submit {
+    display: inline-block;
+    border: 1px solid white;
+    background-color: var(--first-color);
+    padding: 5px 20px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+    float: right;
+    clear: right;
+    margin-right: 50px;
+}
+/* end form */
+/* Start Denah */
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    margin: auto;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: var(--second-color);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: var(--second-color);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.denah-images img {
+    width: 100%;
+}
+/* End Denah */
+
+/* start footer */
+.footer {
+    background-color: var(--first-color);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
