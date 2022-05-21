@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -28,13 +29,15 @@ Route::get('/', function () {
 //     ]);
 // });
 
-Route::get('/login', [UserController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [UserController::class, 'authenticate']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
 
-Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', function () {
-    return view('dashboard.index');
+    return view('dashboard.index', [
+        'title' => "Dashboard"
+    ]);
 })->middleware('auth');
 
 Route::get('/help', function () {
