@@ -3,13 +3,13 @@
 @section('container')
     <!-- Start Hero -->
     <div class="hero hero-login">
+      @if(session()->has('loginError'))
+      <div class="alert alert-danger alert-dismissible fade show" style="margin-top: 50px" role="alert">
+          {{session('loginError')}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      @endif
         <div class="hero__inner container d-flex flex-wrap justify-content-center">
-        @if(session()->has('loginError'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{session('loginError')}}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-        @endif
             <div class="left-login">
                 <img src="img/logotext.png" alt="logo" >
                 <h4>sistem informasi peminjaman ruangan di kampus</h4>

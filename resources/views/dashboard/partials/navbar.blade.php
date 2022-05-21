@@ -23,7 +23,7 @@
             @auth
             <li class="main_nav_item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Welcome back, {{auth()->user()->name}}
+                <span class="text-dark">{{auth()->user()->name}} &#9660;</span> 
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-sidebar-reverse"></i> My Dashboard</a></li>
