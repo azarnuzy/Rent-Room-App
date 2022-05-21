@@ -1,9 +1,6 @@
 <?php
 
-<<<<<<< HEAD
 use App\Http\Controllers\LoginController;
-=======
->>>>>>> 2f420137ce5d4ace231afae5aa54a78ecc03abd2
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -32,7 +29,6 @@ Route::get('/', function () {
 //     ]);
 // });
 
-<<<<<<< HEAD
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 
@@ -42,15 +38,6 @@ Route::get('/dashboard', function () {
     return view('dashboard.index', [
         'title' => "Dashboard"
     ]);
-=======
-Route::get('/login', [UserController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [UserController::class, 'authenticate']);
-
-Route::post('/logout', [UserController::class, 'logout']);
-
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
->>>>>>> 2f420137ce5d4ace231afae5aa54a78ecc03abd2
 })->middleware('auth');
 
 Route::get('/help', function () {
@@ -84,8 +71,4 @@ Route::get('/rooms/{room:id}', function () {
     return view('room', [
         'title' => "Room Detail",
     ]);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 2f420137ce5d4ace231afae5aa54a78ecc03abd2
