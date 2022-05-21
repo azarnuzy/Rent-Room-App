@@ -5,19 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Rent extends Model
+class Room extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
-    public function room()
+    public function building()
     {
-        return $this->belongsTo(Room::class);
+        return $this->belongsTo(Building::class);
     }
 
-    public function user()
+    public function room()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Rent::class);
     }
 }

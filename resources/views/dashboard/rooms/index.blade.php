@@ -19,7 +19,7 @@
       <tbody>
         @foreach ($rooms as $room)
           <tr>
-            <th scope="row">{{ $loop->iteration }}</th scope="row">
+            <th>{{ $loop->iteration }}</th>
             <td>{{ $room->name }}</td>
             <td>{{ $room->code }}</td>
             <td style="font-size: 22px;">

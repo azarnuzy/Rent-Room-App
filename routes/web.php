@@ -1,8 +1,12 @@
 <?php
 
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RentController;
+use App\Http\Controllers\RoomController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TemporaryRentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,11 +38,24 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index', [
-        'title' => "Dashboard"
-    ]);
-})->middleware('auth');
+// Route::get('/dashboard', function () {
+//     return view('dashboard.index', [
+//         'title' => "Ruangan",
+//         'rooms' => Room::all(),
+//     ]);
+// })->middleware('auth');
+
+Route::get('/dashboard', [RoomController::class, 'index'])->middleware('auth');
+
+Route::get('/rooms', [RoomController::class, 'index'])->middleware('auth');
+
+Route::get('/dashboard/user', [UserController::class, 'index'])->middleware('auth');
+
+Route::get('/dashboard/admin', [AdminController::class, 'index'])->middleware('auth');
+
+Route::get('/dashboard/rents', [RentController::class, 'index'])->middleware('auth');
+
+Route::get('/dashboard/temporaryRents', [TemporaryRentController::class, 'index'])->middleware('auth');
 
 Route::get('/help', function () {
     return view('help', [
@@ -52,10 +69,10 @@ Route::get('/about', function () {
     ]);
 });
 
-// Route::get('/rents', [Rent::class, 'index']);
+/* // Route::get('/rents', [Rent::class, 'index']);
 Route::get('/rents', function () {
     return view('rents', [
-        'title' => "Rents List",
+        'title' => "Peminjaman",
     ]);
 });
 
@@ -71,4 +88,4 @@ Route::get('/rooms/{room:id}', function () {
     return view('room', [
         'title' => "Room Detail",
     ]);
-});
+}); */

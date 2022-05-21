@@ -4,7 +4,7 @@
       <a href="#">
         <div class="logo_container">
           <div class="logo">
-            <img src="img/logotext.png" alt="LOGO" />
+            <img src="{{Request::is('dashboard') ? '' : '../'}}img/logotext.png" alt="LOGO" />
           </div>
         </div>
       </a>

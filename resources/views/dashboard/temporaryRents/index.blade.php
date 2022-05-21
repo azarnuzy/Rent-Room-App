@@ -12,21 +12,29 @@
         <tr>
           <th scope="row">No.</th>
           <th scope="row">Nama Ruangan</th>
-          <th scope="row">Kode Ruangan</th>
+          <th scope="row">Nama Peminjam</th>
+          <th scope="row">Mulai</th>
+          <th scope="row">Selesai</th>
+          <th scope="row">Tujuan</th>
+          <th scope="row">Status Pinjam</th>
           <th scope="row">Action</th>
         </tr>
       </thead>
       <tbody>
-        @foreach ($rooms as $room)
+        @foreach ($rents as $rent)
           <tr>
             <th scope="row">{{ $loop->iteration }}</th scope="row">
-            <td>{{ $room->name }}</td>
-            <td>{{ $room->code }}</td>
-            <td style="font-size: 22px;">
+            <td>{{ $rent->room->name }}</td>
+            <td>{{ $rent->user->name }}</td>
+            <td>{{ $rent->time_start }}</td>
+            <td>{{ $rent->time_end }}</td>
+            <td>{{ $rent->purpose }}</td>
+            <td>{{ $rent->status }}</td>
+            <td>
               <a href=""><i
-                  class="bi bi-pencil-square text-warning"></i></a>&nbsp;<a
-                href=""><i
-                  class="bi bi-trash-fill text-danger"></i></a>
+                class="bi bi-pencil-square text-warning"></i></a>&nbsp;<a
+              href=""><i
+                class="bi bi-trash-fill text-danger"></i></a>
             </td>
           </tr>
         @endforeach

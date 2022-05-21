@@ -11,24 +11,24 @@
       <thead class="table-info">
         <tr>
           <th scope="row">No.</th>
-          <th scope="row">Nama Ruangan</th>
-          <th scope="row">Kode Ruangan</th>
+          <th scope="row">Username</th>
+          <th scope="row">Email</th>
           <th scope="row">Action</th>
         </tr>
       </thead>
       <tbody>
-        @foreach ($rooms as $room)
-          <tr>
-            <th scope="row">{{ $loop->iteration }}</th scope="row">
-            <td>{{ $room->name }}</td>
-            <td>{{ $room->code }}</td>
-            <td style="font-size: 22px;">
-              <a href=""><i
-                  class="bi bi-pencil-square text-warning"></i></a>&nbsp;<a
-                href=""><i
-                  class="bi bi-trash-fill text-danger"></i></a>
-            </td>
-          </tr>
+        @foreach($admins as $admin) 
+        <tr>
+          <th scope="row">{{$loop->iteration}} </th>
+          <td>{{$admin->name}} </td>
+          <td>{{$admin->email}} </td>
+          <td style="font-size: 22px;">
+            <a href=""><i
+                class="bi bi-pencil-square text-warning"></i></a>&nbsp;<a
+              href=""><i
+                class="bi bi-trash-fill text-danger"></i></a>
+          </td>
+        </tr>
         @endforeach
       </tbody>
     </table>
