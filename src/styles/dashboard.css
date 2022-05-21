@@ -1,0 +1,73 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Font weight =====*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*===== Colors =====*/
+  --first-color: #457280;
+  --second-color: #c4c4c4;
+  --hover-color: #3b606d;
+  --text-color: #0f1111;
+
+  /*===== Font and typography =====*/
+  --body-font: 'Poppins', sans-serif;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+.button {
+  background-color: var(--first-color) !important;
+  border: transparent !important;
+}
+
+/* Start Sidebar */
+.sidebar {
+  background-color: var(--first-color);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 96vh;
+}
+
+.nav-link {
+  padding: 50px 25px;
+  color: white !important;
+  font-size: 22px;
+}
+
+.nav-item:nth-child(1) {
+  margin-top: 100px;
+}
+
+.nav-item {
+  min-height: 100px;
+  width: 100%;
+  background-color: var(--first-color);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.nav-item:hover {
+  background-color: var(--hover-color);
+}
+/* end Sidebar */
+/* Start main-Content */
+.content-title {
+  margin: 100px 0 0 40px;
+}
+
+.filter-tgl {
+  border-radius: 30px;
+  border: 2px solid var(--first-color);
+  padding: 3px 5px;
+}
+
+.detail-explore__info li {
+  list-style: none;
+}

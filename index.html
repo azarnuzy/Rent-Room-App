@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Sistem Informasi Peminjaman Ruangan Kampus"
+    />
+    <meta name="keywords" content="Peminjaman Ruangan Kampus" />
+    <meta name="theme-color" content="#1A374D" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/responsive.css" />
+    <link rel="stylesheet" href="./src/styles/normalize.css" />
+    <link rel="stylesheet" href="./src/styles/landingPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>SiManuk App</title>
+  </head>
+  <body>
+    <!-- Start Navbar -->
+    <header class="header d-flex justify-content-center">
+      <div class="header_content d-flex flex-row align-items-center">
+        <a href="./index.html">
+          <div class="logo_container">
+            <div class="logo">
+              <img src="./src/images/Logo+.png" alt="LOGO" />
+            </div>
+          </div>
+        </a>
+        <div class="main_nav_container">
+          <div class="main_nav">
+            <ul class="main_nav_list">
+              <li class="main_nav_item">
+                <a href="./index.html#">Beranda</a>
+              </li>
+              <li class="main_nav_item">
+                <a href="./about.html">Tentang</a>
+              </li>
+              <li class="main_nav_item">
+                <a href="./bantuan.html">Bantuan</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sign_in">
+          <a href="./login.html">Masuk</a>
+        </div>
+    </header>
+    <!-- End Navbar -->
+    <!-- Start Hero -->
+    <div class="hero">
+      <div class="hero__inner container">
+        <div class="hero-description">
+            <h2>Streamline loan, make it easy for you to keep working and creating!</h2>
+            <p>Sistem Informasi Peminjaman Ruangan Kampus</p>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero -->
+    <!-- Start Daftar Ruangan -->
+    <div class="daftar-ruangan my-5 container">
+        <h3 class="title-daftar-ruangan text-center">
+            Daftar Ruangan
+        </h3>
+        <div class="list-ruangan d-flex flex-wrap justify-content-center">
+            <div class="card m-3" style="width: 18rem;">
+                <img src="./src/images/noPhoto.png" class="card-img-top" alt="Ruang Kelas">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Ruang Kelas</h5>
+                  <p class="card-text">Ruang kelas ini memiliki kapasitas 20-30 orang dan biasanya dipakai untuk perkuliahan.</p>
+                </div>
+              </div>
+              <div class="card m-3" style="width: 18rem;">
+                <img src="./src/images/noPhoto.png" class="card-img-top" alt="Ruang Kelas">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Ruang Lab</h5>
+                  <p class="card-text">Ruang lab berisi komputer yang biasanya dipakai untuk praktikum. Kapasitas ruangan ini biasanya mencapai 20-25 orang</p>
+                </div>
+              </div>
+              <div class="card m-3" style="width: 18rem;">
+                <img src="./src/images/noPhoto.png" class="card-img-top" alt="Ruang Kelas">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Ruang Dosen</h5>
+                  <p class="card-text">Ruang ini digunakan oleh dosen untuk istirahat</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- End Daftar Ruangan -->
+    <!-- Start Denah -->
+    <div class="denah my-4 container">
+        <h2 class="title-denah text-center">Denah</h2>
+        <div class="filter-denah filter-option">
+            <div class="custom-select" style="width:250px;">
+                <select> 
+                  <option value="FPMIPA C - Lantai 1">FPMIPA C - Lantai 1</option>
+                  <option value="FPMIPA C - Lantai 2">FPMIPA C - Lantai 2</option>
+                  <option value="FPMIPA C - Lantai 3">FPMIPA C - Lantai 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="denah-images">
+            <img src="./src/images/sample-denah.png" alt="">
+        </div>
+    </div>
+    <!-- End Denah -->
+    <!-- Start Footer -->
+    <footer class="footer d-flex justify-content-center">
+      <div class="container">
+        &copy; Copyright <strong><span>SiManuk</span></strong
+        >. All Rights Reserved
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="./src/script/index.js"></script>
+  </body>
+</html>
