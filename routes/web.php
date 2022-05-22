@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardRentController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TemporaryRentController;
@@ -40,13 +41,7 @@ Route::resource('dashboard/rooms', RoomController::class)->middleware('auth');
 
 Route::resource('dashboard/users', DashboardUserController::class)->middleware('auth');
 
-Route::get('dashboard/admin', function () {
-    return view('dashboard.admin.index', [
-        'title' => "Admin",
-        'admins' => User::where('role_id', 2)->get(),
-        'roles' => Role::all(),
-    ]);
-});
+Route::resource('dashboard/admin', DashboardAdminController::class)->middleware('auth');
 
 Route::get('/dashboard/temporaryRents', [TemporaryRentController::class, 'index'])->middleware('auth');
 

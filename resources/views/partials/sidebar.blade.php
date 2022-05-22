@@ -1,7 +1,7 @@
 <div class=" col-md-2 col-6 p-0 sidebar">
     <ul class="nav flex-column ">
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard/admins">Daftar Admin</a>
+        <a class="nav-link" href="/dashboard/admin">Daftar Admin</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/dashboard/users">Daftar User</a>
