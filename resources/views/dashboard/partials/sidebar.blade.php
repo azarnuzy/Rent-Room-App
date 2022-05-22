@@ -1,8 +1,8 @@
 <div class=" col-md-2 col-6 p-0 sidebar">
     <ul class="nav flex-column ">
       @if (auth()->user()->role_id <= 2)
-        <li class="nav-item {{Request::is('dashboard/admins') ? 'sidebar-active' : ''}}">
-          <a class="nav-link" href="/dashboard/admins">Daftar Admin</a>
+        <li class="nav-item {{Request::is('dashboard/admin') ? 'sidebar-active' : ''}}">
+          <a class="nav-link" href="/dashboard/admin">Daftar Admin</a>
         </li>
         <li class="nav-item {{Request::is('dashboard/users') ? 'sidebar-active' : ''}}">
           <a class="nav-link " href="/dashboard/users">Daftar User</a>

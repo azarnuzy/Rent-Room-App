@@ -1,13 +1,15 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+namespace App;
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RentController;
 use App\Http\Controllers\DashboardRentController;
+use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\RoomController;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TemporaryRentController;
+use App\Models\User;
+use App\Models\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,9 +38,15 @@ Route::resource('dashboard/rents', DashboardRentController::class)->middleware('
 
 Route::resource('dashboard/rooms', RoomController::class)->middleware('auth');
 
-Route::get('/dashboard/users', [UserController::class, 'index'])->middleware('auth');
+Route::resource('dashboard/users', DashboardUserController::class)->middleware('auth');
 
-Route::get('/dashboard/admins', [AdminController::class, 'index'])->middleware('auth');
+Route::get('dashboard/admin', function () {
+    return view('dashboard.admin.index', [
+        'title' => "Admin",
+        'admins' => User::where('role_id', 2)->get(),
+        'roles' => Role::all(),
+    ]);
+});
 
 Route::get('/dashboard/temporaryRents', [TemporaryRentController::class, 'index'])->middleware('auth');
 

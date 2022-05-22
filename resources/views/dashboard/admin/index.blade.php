@@ -13,6 +13,7 @@
         <tr>
           <th scope="row">No.</th>
           <th scope="row">Username</th>
+          <th scope="row">Nomor Induk</th>
           <th scope="row">Email</th>
           <th scope="row">Action</th>
         </tr>
@@ -22,6 +23,7 @@
         <tr>
           <th scope="row">{{$loop->iteration}} </th>
           <td>{{$admin->name}} </td>
+          <td>{{$admin->nomor_induk}} </td>
           <td>{{$admin->email}} </td>
           <td style="font-size: 22px;">
             <a href=""><i

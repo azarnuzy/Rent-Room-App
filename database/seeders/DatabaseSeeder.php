@@ -58,6 +58,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('admin'),
+            'nomor_induk' => '2001194590',
             'role_id' => 1,
         ]);
 
@@ -65,6 +66,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'sekar',
             'email' => 'sekar@gmail.com',
             'password' => bcrypt('sekar'),
+            'nomor_induk' => '2007703',
             'role_id' => 2,
         ]);
 
@@ -72,6 +74,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'azar',
             'email' => 'azar@gmail.com',
             'password' => bcrypt('azar'),
+            'nomor_induk' => '2004191',
             'role_id' => 5,
         ]);
 
@@ -79,6 +82,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'zek',
             'email' => 'zek@gmail.com',
             'password' => bcrypt('zek'),
+            'nomor_induk' => '2007993',
             'role_id' => 5,
         ]);
 
@@ -86,6 +90,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'ahmad',
             'email' => 'ahmad@gmail.com',
             'password' => bcrypt('ahmad'),
+            'nomor_induk' => '2007235',
             'role_id' => 4,
         ]);
 
@@ -93,19 +98,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'rahma',
             'email' => 'rahma@gmail.com',
             'password' => bcrypt('rahma'),
+            'nomor_induk' => '2005668',
             'role_id' => 5,
-        ]);
-
-        Admin::create([
-            'name' => 'sekarmadu',
-            'email' => 'sekarmadu@gmail.com',
-            'password' => bcrypt('sekarmadu'),
-        ]);
-
-        Admin::create([
-            'name' => 'azarnuzy',
-            'email' => 'azarnuzy@gmail.com',
-            'password' => bcrypt('azarnuzy'),
         ]);
 
         Faculty::create([
@@ -196,7 +190,7 @@ class DatabaseSeeder extends Seeder
             'room_id' => mt_rand(1, 2),
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
-            'transaction_end' => null,
+            'transaction_end' => '2022-05-20 11:30:45',
             'time_start_use' => '2022-05-20 09:00:00',
             'time_end_use' => '2022-05-20 12:00:00',
             'purpose' => 'kerja kelompok',
@@ -207,7 +201,7 @@ class DatabaseSeeder extends Seeder
             'room_id' => mt_rand(1, 2),
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
-            'transaction_end' => null,
+            'transaction_end' => '2022-05-20 14:50:45',
             'time_start_use' => '2022-05-11 08:00:00',
             'time_end_use' => '2022-05-11 15:00:00',
             'purpose' => 'rapat',

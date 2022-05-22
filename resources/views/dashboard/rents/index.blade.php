@@ -35,10 +35,14 @@
             <td>{{ $rent->time_end_use }}</td>
             <td>{{ $rent->purpose }}</td>
             <td>{{ $rent->transaction_start }}</td>
-            @if(!is_null($rent->transaction_end))
-            <td>{{ $rent->transaction_end }}</td>
-            @else
+            @if ($rent->status == "dipinjam")
             <td><button class="btn btn-success" style="padding: 2px 10px"><i class="bi bi-check fs-5"></i></button></td>
+            @else
+              @if(!is_null($rent->transaction_end))
+                <td>{{ $rent->transaction_end }}</td>   
+              @else
+              <td>-</td>   
+              @endif 
             @endif
             <td>{{ $rent->status }}</td>
           </tr>
