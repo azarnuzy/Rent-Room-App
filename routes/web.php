@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardRentController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\DashboardAdminController;
-use App\Http\Controllers\RoomController;
+use App\Http\Controllers\DashboardRoomController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TemporaryRentController;
 use App\Models\User;
@@ -37,7 +37,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::resource('dashboard/rents', DashboardRentController::class)->middleware('auth');
 
-Route::resource('dashboard/rooms', RoomController::class)->middleware('auth');
+Route::resource('dashboard/rooms', DashboardRoomController::class)->middleware('auth');
 
 Route::resource('dashboard/users', DashboardUserController::class)->middleware('auth');
 

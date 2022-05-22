@@ -36,7 +36,11 @@
             <td>{{ $room->code }}</td>
             <td style="font-size: 22px;">
               <a href=""><i class="bi bi-pencil-square text-warning"></i></a>&nbsp;
-              <a href=""><i class="bi bi-trash-fill text-danger"></i></a>
+              <form action="/dashboard/rooms/{{ $room->code }}" method="post" class="d-inline">
+                @method('delete')
+                @csrf
+                <button type="submit" class="bi bi-trash-fill text-danger border-0" onclick="return confirm('Hapus data ruangan?')"></button>
+              </form>
             </td>
           </tr>
         @endforeach

@@ -7,7 +7,7 @@ use App\Models\Rent;
 use App\Models\Building;
 use Illuminate\Http\Request;
 
-class RoomController extends Controller
+class DashboardRoomController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -106,6 +106,7 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+        Room::destroy($room->id);
+        return redirect('/dashboard/rooms')->with('deleteRoom', 'Data ruangan berhasil dihapus');
     }
 }
