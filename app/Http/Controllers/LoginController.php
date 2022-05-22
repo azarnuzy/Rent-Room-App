@@ -25,7 +25,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/dashboard/rents');
         }
 
         return back()->with('loginError', 'Gagal melakukan proses autentikasi. Mohon untuk mengisi email & password dengan benar.');

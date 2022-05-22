@@ -1,19 +1,23 @@
 <div class=" col-md-2 col-6 p-0 sidebar">
     <ul class="nav flex-column ">
-      <li class="nav-item">
-        <a class="nav-link" href="/admin">Daftar Admin</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/user">Daftar User</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/rooms">Daftar Ruangan</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/rent">Daftar Peminjaman</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/temporaryRent">Daftar Peminjaman Sementara</a>
+      @if (auth()->user()->role_id <= 2)
+        <li class="nav-item {{Request::is('dashboard/admins') ? 'sidebar-active' : ''}}">
+          <a class="nav-link" href="/dashboard/admins">Daftar Admin</a>
+        </li>
+        <li class="nav-item {{Request::is('dashboard/users') ? 'sidebar-active' : ''}}">
+          <a class="nav-link " href="/dashboard/users">Daftar User</a>
+        </li>
+        <li class="nav-item {{Request::is('dashboard/temporaryRents') ? 'sidebar-active'  : ''}}">
+          <a class="nav-link " href="/dashboard/temporaryRents">Daftar Peminjaman Sementara</a>
+        </li>
+      @endif
+      @if (auth()->user()->role_id <= 4)
+        <li class="nav-item {{Request::is('dashboard/rents') ? 'sidebar-active' : ''}}">
+          <a class="nav-link " href="/dashboard/rents">Daftar Peminjaman</a>
+        </li>
+      @endif
+      <li class="nav-item {{Request::is('dashboard/rooms') ? 'sidebar-active' : ''}}">
+        <a class="nav-link" href="/dashboard/rooms">Daftar Ruangan</a>
       </li>
     </ul>
 </div>

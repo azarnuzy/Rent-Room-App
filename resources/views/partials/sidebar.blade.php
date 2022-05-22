@@ -1,19 +1,19 @@
 <div class=" col-md-2 col-6 p-0 sidebar">
     <ul class="nav flex-column ">
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard/admin">Daftar Admin</a>
+        <a class="nav-link" href="/dashboard/admins">Daftar Admin</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard/user">Daftar User</a>
+        <a class="nav-link" href="/dashboard/users">Daftar User</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard">Daftar Ruangan</a>
+        <a class="nav-link" href="/dashboard/rooms">Daftar Ruangan</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard/peminjaman">Daftar Peminjaman</a>
+        <a class="nav-link" href="/dashboard/rents">Daftar Peminjaman</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard/tempPeminjaman">Daftar Peminjaman Sementara</a>
+        <a class="nav-link" href="/dashboard/temporaryRents">Daftar Peminjaman Sementara</a>
       </li>
     </ul>
 </div>

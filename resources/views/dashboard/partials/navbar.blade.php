@@ -4,7 +4,11 @@
       <a href="#">
         <div class="logo_container">
           <div class="logo">
-            <img src="img/logotext.png" alt="LOGO" />
+            @if (substr_count(URL::current(), '/') == 5)
+            <img src='{{Request::is('dashboard') ? '' : '../../'}}img/logotext.png' alt='LOGO' />
+            @else
+            <img src='{{Request::is('dashboard') ? '' : '../'}}img/logotext.png' alt='LOGO' />    
+            @endif  
           </div>
         </div>
       </a>
