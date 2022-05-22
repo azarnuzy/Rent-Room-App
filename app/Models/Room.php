@@ -20,4 +20,9 @@ class Room extends Model
     {
         return $this->hasMany(Rent::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'code';
+    }
 }

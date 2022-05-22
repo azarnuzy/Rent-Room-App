@@ -4,8 +4,9 @@
 <div class="col-md-10 p-0">
     <h2 class="content-title text-center">Daftar {{$title}}</h2>
 <div class="card-body text-end">
-    <a class="btn btn-primary mb-3 button" href="./addDosen.php" role="button">Pinjam</a>
-  <a class="btn btn-primary mb-3 button" href="./addDosen.php" role="button">Tambah Ruangan</a>
+  <button type="button" class="mb-3 btn button btn-primary" data-bs-toggle="modal" data-bs-target="#addUser">
+    Tambah User
+  </button>
   <div class="table-responsive">
     <table class="table table-hover table-stripped table-bordered text-center">
       <thead class="table-info">
@@ -36,5 +37,9 @@
     </table>
   </div>
 </div>
+<div class="my-2 text-center d-flex justify-content-center">
+  {{ $users->links()}}
 </div>
+</div>
+@extends('dashboard.partials.addUserModal')
 @endsection

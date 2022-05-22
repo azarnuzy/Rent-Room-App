@@ -58,42 +58,42 @@ class DatabaseSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('admin'),
-            'role_id' => mt_rand(1, 5),
+            'role_id' => 1,
         ]);
 
         User::create([
             'name' => 'sekar',
             'email' => 'sekar@gmail.com',
             'password' => bcrypt('sekar'),
-            'role_id' => mt_rand(1, 5),
+            'role_id' => 2,
         ]);
 
         User::create([
             'name' => 'azar',
             'email' => 'azar@gmail.com',
             'password' => bcrypt('azar'),
-            'role_id' => mt_rand(1, 5),
+            'role_id' => 5,
         ]);
 
         User::create([
             'name' => 'zek',
             'email' => 'zek@gmail.com',
             'password' => bcrypt('zek'),
-            'role_id' => mt_rand(1, 5),
+            'role_id' => 5,
         ]);
 
         User::create([
             'name' => 'ahmad',
             'email' => 'ahmad@gmail.com',
             'password' => bcrypt('ahmad'),
-            'role_id' => mt_rand(1, 5),
+            'role_id' => 4,
         ]);
 
         User::create([
             'name' => 'rahma',
             'email' => 'rahma@gmail.com',
             'password' => bcrypt('rahma'),
-            'role_id' => mt_rand(1, 5),
+            'role_id' => 5,
         ]);
 
         Admin::create([
@@ -138,8 +138,8 @@ class DatabaseSeeder extends Seeder
             'code' => 'A304',
             'name' => 'Lab Komputer',
             'img' => 'roomdefault.jpg',
-            'floor' => '3',
-            'status' => true,
+            'floor' => 3,
+            'status' => false,
             'capacity' => 30,
             'type' => 'Laboratorium',
             'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
@@ -150,10 +150,22 @@ class DatabaseSeeder extends Seeder
             'code' => 'A305',
             'name' => 'Ruang Kelas',
             'img' => 'roomdefault.jpg',
-            'floor' => '3',
-            'status' => true,
+            'floor' => 3,
+            'status' => false,
             'capacity' => 25,
-            'type' => 'Kelas',
+            'type' => 'Ruang Kelas',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C201',
+            'name' => 'Lab Umum',
+            'img' => 'roomdefault.jpg',
+            'floor' => 2,
+            'status' => false,
+            'capacity' => 25,
+            'type' => 'Labroratorium',
             'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
             'building_id' => mt_rand(1, 3)
         ]);
@@ -161,9 +173,10 @@ class DatabaseSeeder extends Seeder
         Rent::create([
             'room_id' => mt_rand(1, 2),
             'user_id' => mt_rand(1, 5),
-            'transaction_time' => now(),
-            'time_start' => '2022-05-11 08:00:00',
-            'time_end' => null,
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-11 08:00:00',
+            'time_end_use' => '2022-05-11 12:00:00',
             'purpose' => 'praktikum',
             'status' => 'dipinjam',
         ]);
@@ -171,19 +184,21 @@ class DatabaseSeeder extends Seeder
         Rent::create([
             'room_id' => mt_rand(1, 2),
             'user_id' => mt_rand(1, 5),
-            'transaction_time' => now(),
-            'time_start' => '2022-05-19 10:00:00',
-            'time_end' => null,
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-19 10:00:00',
+            'time_end_use' => '2022-05-19 12:00:00',
             'purpose' => 'kerja kelompok',
-            'status' => 'dipinjam',
+            'status' => 'pending',
         ]);
 
         Rent::create([
             'room_id' => mt_rand(1, 2),
             'user_id' => mt_rand(1, 5),
-            'transaction_time' => now(),
-            'time_start' => '2022-05-20 09:00:00',
-            'time_end' => '2022-05-20 12:00:00',
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-20 09:00:00',
+            'time_end_use' => '2022-05-20 12:00:00',
             'purpose' => 'kerja kelompok',
             'status' => 'selesai',
         ]);
@@ -191,9 +206,10 @@ class DatabaseSeeder extends Seeder
         Rent::create([
             'room_id' => mt_rand(1, 2),
             'user_id' => mt_rand(1, 5),
-            'transaction_time' => now(),
-            'time_start' => '2022-05-11 08:00:00',
-            'time_end' => '2022-05-11 15:00:00',
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-11 08:00:00',
+            'time_end_use' => '2022-05-11 15:00:00',
             'purpose' => 'rapat',
             'status' => 'selesai',
         ]);
@@ -201,11 +217,12 @@ class DatabaseSeeder extends Seeder
         Rent::create([
             'room_id' => mt_rand(1, 2),
             'user_id' => mt_rand(1, 5),
-            'transaction_time' => now(),
-            'time_start' => '2022-05-15 13:30:00',
-            'time_end' => null,
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-15 13:30:00',
+            'time_end_use' => '2022-05-15 17:00:00',
             'purpose' => 'rapat',
-            'status' => 'dipinjam',
+            'status' => 'pending',
         ]);
     }
 }

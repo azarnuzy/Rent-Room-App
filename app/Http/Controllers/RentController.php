@@ -11,7 +11,7 @@ class RentController extends Controller
     {
         return view('dashboard.rents.index', [
             'title' => "Peminjaman",
-            'rents' => Rent::all(),
+            'rents' => Rent::latest()->paginate(10)->withQueryString(),
         ]);
     }
 }

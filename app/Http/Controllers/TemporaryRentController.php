@@ -11,7 +11,7 @@ class TemporaryRentController extends Controller
     {
         return view('dashboard.temporaryRents.index', [
             'title' => "Peminjaman Sementara",
-            'rents' => Rent::all(),
+            'rents' => Rent::latest()->paginate(10)->withQueryString(),
         ]);
     }
 }

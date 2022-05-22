@@ -58,7 +58,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Zakaria">
+            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Zakaria">
             <h5 class="text-center mt-2">M. Zakaria S.</h5>
             <p class="text-center">2007993</p>
           </div>
@@ -67,7 +67,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Rahma">
+            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Rahma">
             <h5 class="text-center mt-2">Rahma Maulida</h5>
             <p class="text-center">2003688</p>
           </div>
@@ -76,7 +76,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Azar">
+            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Azar">
             <h5 class="text-center mt-2">M. Azar Nuzy</h5>
             <p class="text-center">2004191</p>
           </div>
@@ -85,7 +85,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Sekar">
+            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Sekar">
             <h5 class="text-center mt-2">Sekar Madu K.</h5>
             <p class="text-center">2007703</p>
           </div>
@@ -94,7 +94,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="./src/images/mark.jpg" alt="Ahmad">
+            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Ahmad">
             <h5 class="text-center mt-2">Hilman Ahmad R.</h5>
             <p class="text-center">2007325</p>
           </div>
