@@ -35,7 +35,8 @@
             <td><a href="/dashboard/rooms/{{ $room->code }}" class="text-decoration-none" role="button">{{ $room->name }}</a></td>
             <td>{{ $room->code }}</td>
             <td style="font-size: 22px;">
-              <a href=""><i class="bi bi-pencil-square text-warning"></i></a>&nbsp;
+              <button type="submit" class="bi bi-pencil-square text-warning border-0" data-bs-toggle="modal" data-bs-target="#editRoom"></button>
+              &nbsp;
               <form action="/dashboard/rooms/{{ $room->code }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
@@ -51,4 +52,5 @@
 </div>
 @extends('dashboard.partials.rentModal')
 @extends('dashboard.partials.addRoomModal')
+@extends('dashboard.partials.editRoomModal')
 @endsection

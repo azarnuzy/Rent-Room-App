@@ -56,9 +56,15 @@
     <!-- tambahkan content disini! -->
     <div class="card-body text-end me-3">
         <div class="d-flex justify-content-between align-items-center">
-            <div class="filter-tgl-wrap">
-                <label for="tlg-pinjam-detail"><strong>Tanggal: </strong></label>
-                <input type="date" name="tgl-pinjam-detail" class="filter-tgl" id="tgl-pinjam-detail">
+            <div class="input-group mb-3 filter-tgl-wrap">
+                <label for="tgl-pinjam-detail"><strong>Tanggal: </strong></label>
+                <div class="filter-detail ms-2 text-start" style="width: 30%; float:left;">
+                    <input type="date" class="form-control" name="bday" id="datePicker" style="width: 50%; display: inline-block;">
+                    <input type="button" class="btn button text-white" value="Filter" id="datebtn">
+                    <input type="button" class="btn button text-white" value="Reset" id="datereset">
+                    <!-- <input type="date" class="form-control" id="tgl-pinjam-detail" style="width: 50%; display: inline-block;">
+                    <button class="input-group-text btn btn-primary" id="submit-detail-filter">Filter</button> -->
+            </div>
             </div>
             <a class="btn btn-primary mb-3 button d-block" href="./addDosen.php" role="button">Pinjam</a>
         </div>
@@ -75,12 +81,12 @@
                     <th scope="row">Status Pinjam</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="rent-details">
                     @foreach ($rents as $rent)
-                    <tr>
+                    <tr class="rent-detail">
                       <th scope="row">{{ $loop->iteration }}</th scope="row">
                       <td>{{ $rent->user->name }}</td>
-                      <td>{{ $rent->time_start_use }}</td>
+                      <td class="detail-rent-room_start-time">{{ $rent->time_start_use }}</td>
                       <td>{{ $rent->time_end_use }}</td>
                       <td>{{ $rent->purpose }}</td>
                       <td>{{ $rent->transaction_start }}</td>

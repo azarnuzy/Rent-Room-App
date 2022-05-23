@@ -102,6 +102,62 @@ class DatabaseSeeder extends Seeder
             'role_id' => 5,
         ]);
 
+        User::create([
+            'name' => 'yaya',
+            'email' => 'yaya@gmail.com',
+            'password' => bcrypt('yaya'),
+            'nomor_induk' => '1007272',
+            'role_id' => 3,
+        ]);
+
+        User::create([
+            'name' => 'rosal',
+            'email' => 'rosal@gmail.com',
+            'password' => bcrypt('rosal'),
+            'nomor_induk' => '1005263',
+            'role_id' => 3,
+        ]);
+
+        User::create([
+            'name' => 'cahya',
+            'email' => 'cahya@gmail.com',
+            'password' => bcrypt('cahya'),
+            'nomor_induk' => '2001231',
+            'role_id' => 5,
+        ]);
+
+        User::create([
+            'name' => 'iqbal',
+            'email' => 'iqbal@gmail.com',
+            'password' => bcrypt('iqbal'),
+            'nomor_induk' => '1905221',
+            'role_id' => 5,
+        ]);
+
+        User::create([
+            'name' => 'windah',
+            'email' => 'windah@gmail.com',
+            'password' => bcrypt('windah'),
+            'nomor_induk' => '1909234',
+            'role_id' => 5,
+        ]);
+
+        User::create([
+            'name' => 'bintang',
+            'email' => 'bintang@gmail.com',
+            'password' => bcrypt('bintang'),
+            'nomor_induk' => '2102278',
+            'role_id' => 5,
+        ]);
+
+        User::create([
+            'name' => 'maneh',
+            'email' => 'maneh@gmail.com',
+            'password' => bcrypt('maneh'),
+            'nomor_induk' => '2105634',
+            'role_id' => 5,
+        ]);
+
         Faculty::create([
             'code' => 'FPMIPA',
             'name' => 'Fakultas Pendidikan Matematika dan IPA',
