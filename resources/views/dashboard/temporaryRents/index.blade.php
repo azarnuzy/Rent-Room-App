@@ -32,7 +32,7 @@
             <td>{{ $rent->status }}</td>
             <td>
               <button class="btn btn-success mb-2" style="padding: 2px 10px">Setuju</button>
-                <button class="btn btn-danger mb-2" style="padding: 2px 10px">Tidak Setuju</button>
+              <button class="btn btn-danger mb-2" style="padding: 2px 10px">Tidak Setuju</button>
             </td>
           </tr>
         @endforeach

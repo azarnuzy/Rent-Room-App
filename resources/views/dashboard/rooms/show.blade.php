@@ -8,8 +8,8 @@
         <div class='img-container'>
           <img
             class='explore-item__thumbnail'
-            src='../../img/{{ $room->img }}'
-            alt='{{ $room->img }}'
+            src='{{ asset('storage/' . $room->img) }}'
+            alt='{{ $room->name . '.jpg' }}'
             tabindex='0'
             style="width: 18rem;"
           />

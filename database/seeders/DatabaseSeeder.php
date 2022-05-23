@@ -131,7 +131,7 @@ class DatabaseSeeder extends Seeder
         Room::create([
             'code' => 'A304',
             'name' => 'Lab Komputer',
-            'img' => 'roomdefault.jpg',
+            'img' => 'room-image/roomdefault.jpg',
             'floor' => 3,
             'status' => false,
             'capacity' => 30,
@@ -143,7 +143,7 @@ class DatabaseSeeder extends Seeder
         Room::create([
             'code' => 'A305',
             'name' => 'Ruang Kelas',
-            'img' => 'roomdefault.jpg',
+            'img' => 'room-image/roomdefault.jpg',
             'floor' => 3,
             'status' => false,
             'capacity' => 25,
@@ -155,7 +155,7 @@ class DatabaseSeeder extends Seeder
         Room::create([
             'code' => 'C201',
             'name' => 'Lab Umum',
-            'img' => 'roomdefault.jpg',
+            'img' => 'room-image/roomdefault.jpg',
             'floor' => 2,
             'status' => false,
             'capacity' => 25,

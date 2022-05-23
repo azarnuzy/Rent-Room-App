@@ -43,19 +43,18 @@
     <!-- End Daftar Ruangan -->
     <!-- Start Denah -->
     <div class="denah my-4 container">
-        <h2 class="title-denah text-center">Denah</h2>
-        <div class="filter-denah filter-option">
-            <div class="custom-select" style="width:250px;">
-                <select> 
-                  <option value="FPMIPA C - Lantai 1">FPMIPA C - Lantai 1</option>
-                  <option value="FPMIPA C - Lantai 2">FPMIPA C - Lantai 2</option>
-                  <option value="FPMIPA C - Lantai 3">FPMIPA C - Lantai 3</option>
-                </select>
-            </div>
-        </div>
-        <div class="denah-images">
-            <img src="img/sample-denah.png" alt="">
-        </div>
+      <h2 class="title-denah text-center">Denah</h2>
+      <select class="form-select denah-select d-block mx-auto" id="denah-select" style="width: 50%" aria-label="Default select example">
+        <option selected>Pilih Denah</option>
+        <option value="denah_lt1.png">FPMIPA C - Lantai 1</option>
+        <option value="denah_lt2.png">FPMIPA C - Lantai 2</option>
+        <option value="denah_lt3.png">FPMIPA C - Lantai 3</option>
+      </select>
+      <div class="denah-images">
+        <img src="/img/denah_lt1.png" class="denah_lt1-img d-none" alt="">
+        <img src="/img/denah_lt2.png" class="denah_lt2-img d-none" alt="">
+        <img src="/img/denah_lt3.png" class="denah_lt3-img d-none" alt="">
+      </div>
     </div>
     <!-- End Denah -->
 @endsection

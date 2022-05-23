@@ -97,6 +97,7 @@ class DashboardAdminController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        User::destroy($user->id);
+        return redirect('/dashboard/admin')->with('deleteAdmin', 'Hapus data admin berhasil');
     }
 }

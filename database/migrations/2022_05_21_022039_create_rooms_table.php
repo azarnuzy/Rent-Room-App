@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->string('name');
-            $table->string('img');
+            $table->string('img')->nullable();
             $table->integer('floor');
             $table->foreignId('building_id');
             $table->boolean('status');

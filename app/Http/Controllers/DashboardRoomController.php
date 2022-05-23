@@ -41,9 +41,12 @@ class DashboardRoomController extends Controller
      */
     public function store(Request $request)
     {
+        // $request->file('img')->store('room-image');
+
         $validatedData = $request->validate([
             'code' => 'required|max:4',
             'name' => 'required',
+            'img' => 'image',
             'floor' => 'required',
             'capacity' => 'required',
             'building_id' => 'required',
@@ -51,9 +54,13 @@ class DashboardRoomController extends Controller
             'description' => 'required|max:250',
         ]);
 
-        $validatedData['status'] = false;
+        if ($request->file('img')) {
+            $validatedData['img'] = $request->file('img')->store('room-image');
+        } else {
+            $validatedData['img'] = "room-image/roomdefault.jpg";
+        }
 
-        $validatedData['img'] = 'roomdefault.jpg';
+        $validatedData['status'] = false;
 
         Room::create($validatedData);
 

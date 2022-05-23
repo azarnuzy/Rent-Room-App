@@ -19,7 +19,12 @@
                     </div>
                     <div class='mb-3'>
                         <label for='img' class='form-label'>Foto Ruangan</label>
-                        <input class='form-control' type='file' id='img' name='img'/>
+                        <input class="form-control @error('img') is-invalid @enderror" type='file' id='img' name='img'/>
+                        @error('img')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="mb-3 row">
                         <div class="col-6">
