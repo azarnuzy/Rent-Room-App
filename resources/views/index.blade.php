@@ -46,9 +46,9 @@
       <h2 class="title-denah text-center">Denah</h2>
       <select class="form-select denah-select d-block mx-auto" id="denah-select" style="width: 50%" aria-label="Default select example">
         <option selected>Pilih Denah</option>
-        <option value="denah_lt1.png">FPMIPA C - Lantai 1</option>
-        <option value="denah_lt2.png">FPMIPA C - Lantai 2</option>
-        <option value="denah_lt3.png">FPMIPA C - Lantai 3</option>
+        <option value="1">FPMIPA C - Lantai 1</option>
+        <option value="2">FPMIPA C - Lantai 2</option>
+        <option value="3">FPMIPA C - Lantai 3</option>
       </select>
       <div class="denah-images">
         <img src="/img/denah_lt1.png" class="denah_lt1-img d-none" alt="">

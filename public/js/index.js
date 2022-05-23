@@ -1,17 +1,22 @@
-$('#denah-select').change(function() {
-    //Use $option (with the "$") to see that the variable is a jQuery object
-    let denah = $('#denah-select option:selected').val();
-    
-});
-
-
 $(document).ready(function(){
     $("#denah-select").on("change", function() {
-        let denah = $('#denah-select option:selected').val();
-      $("#myTable tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
+      let denah = $('#denah-select option:selected').val();
+
+      if(denah == '1') {
+        $('.denah_lt1-img').removeClass('d-none');
+        $('.denah_lt2-img').addClass('d-none');
+        $('.denah_lt3-img').addClass('d-none');
+      }
+
+      if(denah == '2') {
+        $('.denah_lt1-img').addClass('d-none');
+        $('.denah_lt2-img').removeClass('d-none');
+        $('.denah_lt3-img').addClass('d-none');
+      }
+      if(denah == '3') {
+        $('.denah_lt1-img').addClass('d-none');
+        $('.denah_lt2-img').addClass('d-none');
+        $('.denah_lt3-img').removeClass('d-none');
+      }
     });
   });
-// var denah = $('#denah-select option:selected').val();
-// console.log(denah)
