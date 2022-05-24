@@ -83,7 +83,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'zek@gmail.com',
             'password' => bcrypt('zek'),
             'nomor_induk' => '2007993',
-            'role_id' => 5,
+            'role_id' => 2,
         ]);
 
         User::create([
@@ -91,7 +91,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'ahmad@gmail.com',
             'password' => bcrypt('ahmad'),
             'nomor_induk' => '2007235',
-            'role_id' => 4,
+            'role_id' => 2,
         ]);
 
         User::create([
@@ -99,7 +99,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'rahma@gmail.com',
             'password' => bcrypt('rahma'),
             'nomor_induk' => '2005668',
-            'role_id' => 5,
+            'role_id' => 2,
         ]);
 
         User::create([
@@ -131,7 +131,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'iqbal@gmail.com',
             'password' => bcrypt('iqbal'),
             'nomor_induk' => '1905221',
-            'role_id' => 5,
+            'role_id' => 4,
         ]);
 
         User::create([
@@ -147,7 +147,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'bintang@gmail.com',
             'password' => bcrypt('bintang'),
             'nomor_induk' => '2102278',
-            'role_id' => 5,
+            'role_id' => 4,
         ]);
 
         User::create([
@@ -391,18 +391,7 @@ class DatabaseSeeder extends Seeder
             'room_id' => mt_rand(1, 15),
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
-            'transaction_end' => null,
-            'time_start_use' => '2022-05-19 10:00:00',
-            'time_end_use' => '2022-05-19 12:00:00',
-            'purpose' => 'kerja kelompok',
-            'status' => 'pending',
-        ]);
-
-        Rent::create([
-            'room_id' => mt_rand(1, 15),
-            'user_id' => mt_rand(1, 5),
-            'transaction_start' => now(),
-            'transaction_end' => '2022-05-20 11:30:45',
+            'transaction_end' => now(),
             'time_start_use' => '2022-05-20 09:00:00',
             'time_end_use' => '2022-05-20 12:00:00',
             'purpose' => 'kerja kelompok',
@@ -413,7 +402,7 @@ class DatabaseSeeder extends Seeder
             'room_id' => mt_rand(1, 15),
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
-            'transaction_end' => '2022-05-20 14:50:45',
+            'transaction_end' => now(),
             'time_start_use' => '2022-05-11 08:00:00',
             'time_end_use' => '2022-05-11 15:00:00',
             'purpose' => 'rapat',
@@ -425,6 +414,17 @@ class DatabaseSeeder extends Seeder
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
             'transaction_end' => null,
+            'time_start_use' => '2022-05-19 10:00:00',
+            'time_end_use' => '2022-05-19 12:00:00',
+            'purpose' => 'kerja kelompok',
+            'status' => 'pending',
+        ]);
+
+        Rent::create([
+            'room_id' => mt_rand(1, 15),
+            'user_id' => mt_rand(1, 5),
+            'transaction_start' => now(),
+            'transaction_end' => null,
             'time_start_use' => '2022-05-15 13:30:00',
             'time_end_use' => '2022-05-15 17:00:00',
             'purpose' => 'rapat',
@@ -462,6 +462,50 @@ class DatabaseSeeder extends Seeder
             'time_end_use' => '2022-05-15 17:00:00',
             'purpose' => 'rapat',
             'status' => 'dipinjam',
+        ]);
+
+        Rent::create([
+            'room_id' => mt_rand(1, 15),
+            'user_id' => mt_rand(1, 5),
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-15 13:30:00',
+            'time_end_use' => '2022-05-15 17:00:00',
+            'purpose' => 'rapat',
+            'status' => 'pending',
+        ]);
+
+        Rent::create([
+            'room_id' => mt_rand(1, 15),
+            'user_id' => mt_rand(1, 5),
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-15 13:30:00',
+            'time_end_use' => '2022-05-15 17:00:00',
+            'purpose' => 'latihan presentasi',
+            'status' => 'pending',
+        ]);
+
+        Rent::create([
+            'room_id' => mt_rand(1, 15),
+            'user_id' => mt_rand(1, 5),
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-15 13:30:00',
+            'time_end_use' => '2022-05-15 17:00:00',
+            'purpose' => 'latihan lomba',
+            'status' => 'dipinjam',
+        ]);
+
+        Rent::create([
+            'room_id' => mt_rand(1, 15),
+            'user_id' => mt_rand(1, 5),
+            'transaction_start' => now(),
+            'transaction_end' => now(),
+            'time_start_use' => '2022-05-15 13:30:00',
+            'time_end_use' => '2022-05-15 17:00:00',
+            'purpose' => 'latihan lomba',
+            'status' => 'selesai',
         ]);
     }
 }
