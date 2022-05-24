@@ -102,6 +102,62 @@ class DatabaseSeeder extends Seeder
             'role_id' => 5,
         ]);
 
+        User::create([
+            'name' => 'yaya',
+            'email' => 'yaya@gmail.com',
+            'password' => bcrypt('yaya'),
+            'nomor_induk' => '1007272',
+            'role_id' => 3,
+        ]);
+
+        User::create([
+            'name' => 'rosal',
+            'email' => 'rosal@gmail.com',
+            'password' => bcrypt('rosal'),
+            'nomor_induk' => '1005263',
+            'role_id' => 3,
+        ]);
+
+        User::create([
+            'name' => 'cahya',
+            'email' => 'cahya@gmail.com',
+            'password' => bcrypt('cahya'),
+            'nomor_induk' => '2001231',
+            'role_id' => 5,
+        ]);
+
+        User::create([
+            'name' => 'iqbal',
+            'email' => 'iqbal@gmail.com',
+            'password' => bcrypt('iqbal'),
+            'nomor_induk' => '1905221',
+            'role_id' => 5,
+        ]);
+
+        User::create([
+            'name' => 'windah',
+            'email' => 'windah@gmail.com',
+            'password' => bcrypt('windah'),
+            'nomor_induk' => '1909234',
+            'role_id' => 5,
+        ]);
+
+        User::create([
+            'name' => 'bintang',
+            'email' => 'bintang@gmail.com',
+            'password' => bcrypt('bintang'),
+            'nomor_induk' => '2102278',
+            'role_id' => 5,
+        ]);
+
+        User::create([
+            'name' => 'maneh',
+            'email' => 'maneh@gmail.com',
+            'password' => bcrypt('maneh'),
+            'nomor_induk' => '2105634',
+            'role_id' => 5,
+        ]);
+
         Faculty::create([
             'code' => 'FPMIPA',
             'name' => 'Fakultas Pendidikan Matematika dan IPA',
@@ -129,10 +185,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Room::create([
-            'code' => 'A304',
+            'code' => 'A201',
             'name' => 'Lab Komputer',
-            'img' => 'roomdefault.jpg',
-            'floor' => 3,
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 2,
             'status' => false,
             'capacity' => 30,
             'type' => 'Laboratorium',
@@ -141,21 +197,21 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Room::create([
-            'code' => 'A305',
-            'name' => 'Ruang Kelas',
-            'img' => 'roomdefault.jpg',
+            'code' => 'A302',
+            'name' => 'Ruang Kelas C2 2020',
+            'img' => 'room-image/roomdefault.jpg',
             'floor' => 3,
             'status' => false,
-            'capacity' => 25,
+            'capacity' => 40,
             'type' => 'Ruang Kelas',
             'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
             'building_id' => mt_rand(1, 3)
         ]);
 
         Room::create([
-            'code' => 'C201',
+            'code' => 'C202',
             'name' => 'Lab Umum',
-            'img' => 'roomdefault.jpg',
+            'img' => 'room-image/roomdefault.jpg',
             'floor' => 2,
             'status' => false,
             'capacity' => 25,
@@ -164,8 +220,164 @@ class DatabaseSeeder extends Seeder
             'building_id' => mt_rand(1, 3)
         ]);
 
+        Room::create([
+            'code' => 'C203',
+            'name' => 'Lab AI',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 2,
+            'status' => false,
+            'capacity' => 15,
+            'type' => 'Labroratorium',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C204',
+            'name' => 'Lab Computer Network',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 2,
+            'status' => false,
+            'capacity' => 10,
+            'type' => 'Labroratorium',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C205',
+            'name' => 'Lab Multimedia',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 2,
+            'status' => false,
+            'capacity' => 15,
+            'type' => 'Labroratorium',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C206',
+            'name' => 'Lab Microteaching',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 2,
+            'status' => false,
+            'capacity' => 30,
+            'type' => 'Labroratorium',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C207',
+            'name' => 'Lab RPL',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 2,
+            'status' => false,
+            'capacity' => 10,
+            'type' => 'Labroratorium',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C208',
+            'name' => 'Lab Sistem Informasi',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 2,
+            'status' => false,
+            'capacity' => 20,
+            'type' => 'Labroratorium',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C209',
+            'name' => 'Lab Big Data',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 2,
+            'status' => false,
+            'capacity' => 15,
+            'type' => 'Labroratorium',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C301',
+            'name' => 'Ruang Kelas C2 2020',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 3,
+            'status' => false,
+            'capacity' => 40,
+            'type' => 'Ruang Kelas',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C307',
+            'name' => 'Ruang Kelas C1 2020',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 3,
+            'status' => false,
+            'capacity' => 40,
+            'type' => 'Ruang Kelas',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C303',
+            'name' => 'Ruang Kelas C1 2021',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 3,
+            'status' => false,
+            'capacity' => 40,
+            'type' => 'Ruang Kelas',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C304',
+            'name' => 'Ruang Kelas C2 2021',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 3,
+            'status' => false,
+            'capacity' => 40,
+            'type' => 'Ruang Kelas',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C305',
+            'name' => 'Ruang Kelas A 2020',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 3,
+            'status' => false,
+            'capacity' => 40,
+            'type' => 'Ruang Kelas',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
+        Room::create([
+            'code' => 'C306',
+            'name' => 'Ruang Kelas B 2020',
+            'img' => 'room-image/roomdefault.jpg',
+            'floor' => 3,
+            'status' => false,
+            'capacity' => 40,
+            'type' => 'Ruang Kelas',
+            'description' => 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world',
+            'building_id' => mt_rand(1, 3)
+        ]);
+
         Rent::create([
-            'room_id' => mt_rand(1, 2),
+            'room_id' => mt_rand(1, 15),
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
             'transaction_end' => null,
@@ -176,7 +388,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Rent::create([
-            'room_id' => mt_rand(1, 2),
+            'room_id' => mt_rand(1, 15),
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
             'transaction_end' => null,
@@ -187,7 +399,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Rent::create([
-            'room_id' => mt_rand(1, 2),
+            'room_id' => mt_rand(1, 15),
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
             'transaction_end' => '2022-05-20 11:30:45',
@@ -198,7 +410,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Rent::create([
-            'room_id' => mt_rand(1, 2),
+            'room_id' => mt_rand(1, 15),
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
             'transaction_end' => '2022-05-20 14:50:45',
@@ -209,7 +421,18 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Rent::create([
-            'room_id' => mt_rand(1, 2),
+            'room_id' => mt_rand(1, 15),
+            'user_id' => mt_rand(1, 5),
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-15 13:30:00',
+            'time_end_use' => '2022-05-15 17:00:00',
+            'purpose' => 'rapat',
+            'status' => 'pending',
+        ]);
+
+        Rent::create([
+            'room_id' => mt_rand(1, 15),
             'user_id' => mt_rand(1, 5),
             'transaction_start' => now(),
             'transaction_end' => null,

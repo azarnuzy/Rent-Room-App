@@ -19,7 +19,7 @@
     </button>
     @endif
   <div class="table-responsive">
-    <table class="table table-hover table-stripped table-bordered text-center">
+    <table class="table table-hover table-stripped table-bordered text-center" id="datatable">
       <thead class="table-info">
         <tr>
           <th scope="row">No.</th>
@@ -35,7 +35,8 @@
             <td><a href="/dashboard/rooms/{{ $room->code }}" class="text-decoration-none" role="button">{{ $room->name }}</a></td>
             <td>{{ $room->code }}</td>
             <td style="font-size: 22px;">
-              <a href=""><i class="bi bi-pencil-square text-warning"></i></a>&nbsp;
+              <a href="/dashboard/rooms/{{ $room->code }}/edit" class="bi bi-pencil-square text-warning border-0" data-bs-toggle="modal" data-bs-target="#editRoom"></a>
+              &nbsp;
               <form action="/dashboard/rooms/{{ $room->code }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
@@ -51,4 +52,5 @@
 </div>
 @extends('dashboard.partials.rentModal')
 @extends('dashboard.partials.addRoomModal')
+@extends('dashboard.partials.editRoomModal')
 @endsection

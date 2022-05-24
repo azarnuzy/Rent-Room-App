@@ -9,8 +9,6 @@ use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\DashboardRoomController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TemporaryRentController;
-use App\Models\User;
-use App\Models\Role;
 
 /*
 |--------------------------------------------------------------------------

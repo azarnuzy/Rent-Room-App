@@ -18,21 +18,21 @@
         </h3>
         <div class="list-ruangan d-flex flex-wrap justify-content-center">
             <div class="card m-3" style="width: 18rem;">
-                <img src="img/noPhoto.png" class="card-img-top" alt="Ruang Kelas">
+                <img src="img/ruang-kelas.jpeg" style="height: 250px" class="card-img-top" alt="Ruang Kelas">
                 <div class="card-body">
                   <h5 class="card-title text-center">Ruang Kelas</h5>
                   <p class="card-text">Ruang kelas ini memiliki kapasitas 20-30 orang dan biasanya dipakai untuk perkuliahan.</p>
                 </div>
               </div>
               <div class="card m-3" style="width: 18rem;">
-                <img src="img/noPhoto.png" class="card-img-top" alt="Ruang Kelas">
+                <img src="img/lab-komputer.jpeg" style="height: 250px" class="card-img-top" alt="Ruang Kelas">
                 <div class="card-body">
                   <h5 class="card-title text-center">Ruang Lab</h5>
                   <p class="card-text">Ruang lab berisi komputer yang biasanya dipakai untuk praktikum. Kapasitas ruangan ini biasanya mencapai 20-25 orang</p>
                 </div>
               </div>
               <div class="card m-3" style="width: 18rem;">
-                <img src="img/noPhoto.png" class="card-img-top" alt="Ruang Kelas">
+                <img src="img/noPhoto.png" style="height: 250px" class="card-img-top" alt="Ruang Kelas">
                 <div class="card-body">
                   <h5 class="card-title text-center">Ruang Dosen</h5>
                   <p class="card-text">Ruang ini digunakan oleh dosen untuk istirahat</p>
@@ -43,19 +43,18 @@
     <!-- End Daftar Ruangan -->
     <!-- Start Denah -->
     <div class="denah my-4 container">
-        <h2 class="title-denah text-center">Denah</h2>
-        <div class="filter-denah filter-option">
-            <div class="custom-select" style="width:250px;">
-                <select> 
-                  <option value="FPMIPA C - Lantai 1">FPMIPA C - Lantai 1</option>
-                  <option value="FPMIPA C - Lantai 2">FPMIPA C - Lantai 2</option>
-                  <option value="FPMIPA C - Lantai 3">FPMIPA C - Lantai 3</option>
-                </select>
-            </div>
-        </div>
-        <div class="denah-images">
-            <img src="img/sample-denah.png" alt="">
-        </div>
+      <h2 class="title-denah text-center">Denah</h2>
+      <select class="form-select denah-select d-block mx-auto" id="denah-select" style="width: 50%" aria-label="Default select example">
+        <option selected>Pilih Denah</option>
+        <option value="1">FPMIPA C - Lantai 1</option>
+        <option value="2">FPMIPA C - Lantai 2</option>
+        <option value="3">FPMIPA C - Lantai 3</option>
+      </select>
+      <div class="denah-images">
+        <img src="/img/denah_lt1.png" class="denah_lt1-img d-none" alt="">
+        <img src="/img/denah_lt2.png" class="denah_lt2-img d-none" alt="">
+        <img src="/img/denah_lt3.png" class="denah_lt3-img d-none" alt="">
+      </div>
     </div>
     <!-- End Denah -->
 @endsection
