@@ -44,7 +44,7 @@ class DashboardRoomController extends Controller
         // $request->file('img')->store('room-image');
 
         $validatedData = $request->validate([
-            'code' => 'required|max:4',
+            'code' => 'required|max:4|unique:rooms',
             'name' => 'required',
             'img' => 'image',
             'floor' => 'required',
@@ -102,7 +102,35 @@ class DashboardRoomController extends Controller
      */
     public function update(Request $request, Room $room)
     {
-        //
+        // return $request;
+        $rules = [
+            'name' => 'required',
+            'img' => 'image',
+            'floor' => 'required',
+            'capacity' => 'required',
+            'building_id' => 'required',
+            'type' => 'required',
+            'description' => 'required|max:250',
+        ];
+
+        if ($request->code != $room->code) {
+            $rules['code'] = 'required|max:4|unique:rooms';
+        }
+
+        $validatedData = $request->validate($rules);
+
+        if ($request->file('img')) {
+            $validatedData['img'] = $request->file('img')->store('room-image');
+        } else {
+            $validatedData['img'] = "room-image/roomdefault.jpg";
+        }
+
+        $validatedData['status'] = false;
+
+        Room::where('id', $room->id)
+            ->update($validatedData);
+
+        return redirect('/dashboard/rooms')->with('roomSuccess', 'Data ruangan berhasil diubah');
     }
 
     /**

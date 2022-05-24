@@ -49,37 +49,7 @@
     <script src="/js/index.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $('#datatable').DataTable();
-      });
-      $("#datatable_length").css({"float": "left"})
-      </script>
-
-{{-- Room Edit Modal --}}
-{{-- <script src="/js/index.js"></script> --}}
-    <script>
-      $(document).ready(function () {
-        $('#editRoom').on('click', function () {
-
-          const id = $(this).data('id');
-          const code = $(this).data('code');
-
-          $.ajax({
-            url: '/dashboard/rooms/' + code + '/edit',
-            data: {
-              id: id,
-              code: code,
-            },
-            type: 'get',
-            dataType: 'json',
-            success: function(data) {
-              console.log(data);
-            }
-          });
-        });
-      });
-    </script>
+    {{-- Room Edit Modal --}}
+    <script src="/js/editroom.js"></script>
   </body>
 </html>

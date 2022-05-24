@@ -6,13 +6,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="text-align: left;">
-                <form action="/dashboard/rooms/{{ $room->code }}" method="post" enctype="multipart/form-data">
+                <form action="/dashboard/rooms/{{ $room->code }}" method="post" enctype="multipart/form-data" id="editform">
                     @method('put')
                     @csrf
                     <input type="hidden" name="id" id="id">
                     <div class="mb-3">
                         <label for="code" class="form-label">Kode Ruangan</label>
-                        <input type="text" class="form-control" id="code" name="code" required value="{{ old('code') }}">
+                        <input type="text" class="form-control  @error('code') is-invalid @enderror" id="code" name="code" required value="{{ old('code') }}">
+                        @error('code')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama Ruangan</label>
@@ -67,7 +72,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="submit" class="btn btn-primary" id="editbtn" name="editbtn">Simpan</button>
                     </div>
                 </form>
             </div>

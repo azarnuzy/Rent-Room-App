@@ -99,6 +99,7 @@ class DashboardRentController extends Controller
      */
     public function destroy(Rent $rent)
     {
-        //
+        Room::destroy($rent->id);
+        return redirect('/dashboard/rents')->with('deleteRent', 'Data peminjaman berhasil dihapus');
     }
 }

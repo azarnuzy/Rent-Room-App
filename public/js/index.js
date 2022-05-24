@@ -50,5 +50,3 @@ $(document).ready(function () {
         }
     });
 });
-
-$(".dataTables_length").css("float", "left");
