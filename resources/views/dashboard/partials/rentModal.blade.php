@@ -12,10 +12,14 @@
                     <div class="mb-3">
                         <label for="room_id" class="form-label d-block">Kode Ruangan</label>
                         <select class="form-select" aria-label="Default select example" name="room_id"
-                            id="room_id" required>
+                            id="room_id" required {{ count(request()->segments()) == 3 ? 'disabled' : '' }}>
                             <option selected disabled>Pilih Kode Ruangan</option>
                             @foreach ($rooms as $room)
-                                <option value="{{ $room->id }}">{{ $room->code }}</option>                        
+                                @if ($room->code == request()->segment(count(request()->segments())))
+                                    <option value="{{ $room->id }}" selected>{{ $room->code }} - {{ $room->name }}</option>
+                                @else
+                                    <option value="{{ $room->id }}">{{ $room->code }} - {{ $room->name }}</option>
+                                @endif
                             @endforeach
                         </select>
                     </div>

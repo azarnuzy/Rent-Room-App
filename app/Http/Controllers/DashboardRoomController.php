@@ -78,6 +78,7 @@ class DashboardRoomController extends Controller
         return view('dashboard.rooms.show', [
             'title' => $room->name,
             'room' => $room,
+            'rooms' => Room::all(),
             'rents' => Rent::where('room_id', $room->id)->get(),
         ]);
     }

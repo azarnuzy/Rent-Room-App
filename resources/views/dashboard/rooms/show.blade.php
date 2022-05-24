@@ -2,8 +2,10 @@
 
 @section('container')
 <!-- Main Content -->
+{{-- @dd(request()->segment(count(request()->segments()))) --}}
+{{-- @dd(count(request()->segments())) --}}
 <div class="col-md-10 p-0">
-    <h2 class="content-title text-center">{{$room->name}}</h2>
+    <h2 class="content-title text-center mb-3">{{$room->name}}</h2>
     <article class='explore-detail d-flex flex-wrap' style="margin-left: 20px;" tabindex='0'>
         <div class='img-container'>
           <img
@@ -66,7 +68,9 @@
                     <button class="input-group-text btn btn-primary" id="submit-detail-filter">Filter</button> -->
             </div>
             </div>
-            <a class="btn btn-primary mb-3 button d-block" href="./addDosen.php" role="button">Pinjam</a>
+            @if (auth()->user()->role_id <= 4)
+                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#pinjamRuangan">Pinjam</button>
+            @endif
         </div>
         <div class="table-responsive">
             <table class="table table-hover table-stripped table-bordered text-center dt-head-center" id="datatable">
@@ -100,4 +104,5 @@
 </div>
 <!-- Main Content -->
 </div>
+@extends('dashboard.partials.rentModal')
 @endsection
