@@ -100,4 +100,15 @@ class DashboardAdminController extends Controller
         User::destroy($user->id);
         return redirect('/dashboard/admin')->with('deleteAdmin', 'Hapus data admin berhasil');
     }
+
+    public function removeAdmin($id)
+    {
+        $adminData = [
+            'role_id' => 5
+        ];
+
+        User::where('id', $id)->update($adminData);
+
+        return redirect('/dashboard/admin');
+    }
 }

@@ -43,6 +43,8 @@ Route::get('dashboard/users/{id}/makeAdmin', [DashboardUserController::class, 'm
 
 Route::resource('dashboard/users', DashboardUserController::class)->middleware('auth');
 
+Route::get('dashboard/admin/{id}/removeAdmin', [DashboardAdminController::class, 'removeAdmin'])->middleware('auth');
+
 Route::resource('dashboard/admin', DashboardAdminController::class)->middleware('auth');
 
 Route::get('/dashboard/temporaryRents', [TemporaryRentController::class, 'index'])->middleware('auth');
