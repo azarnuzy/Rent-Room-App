@@ -39,7 +39,7 @@ Route::resource('dashboard/rents', DashboardRentController::class)->middleware('
 
 Route::resource('dashboard/rooms', DashboardRoomController::class)->middleware('auth');
 
-Route::resource('dashboard/users/{id}/makeAdmin', [DashboardUserController::class, 'makeAdmin'])->middleware('auth');
+Route::get('dashboard/users/{id}/makeAdmin', [DashboardUserController::class, 'makeAdmin'])->middleware('auth');
 
 Route::resource('dashboard/users', DashboardUserController::class)->middleware('auth');
 

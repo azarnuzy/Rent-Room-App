@@ -4,9 +4,9 @@
 <div class="col-md-10 p-0">
     <h2 class="content-title text-center">Daftar {{$title}}</h2>
 <div class="card-body text-end">
-  <button type="button" class="mb-3 btn button btn-primary" data-bs-toggle="modal" data-bs-target="#chooseAdmin">
+  <a href="/dashboard/users/" type="button" class="mb-3 btn button btn-primary">
     Pilih dari User
-  </button>
+  </a>
   <button type="button" class="mb-3 btn button btn-primary" data-bs-toggle="modal" data-bs-target="#addUser">
     Tambah Data Baru
   </button>
@@ -44,5 +44,5 @@
 </div>
 </div>
 @extends('dashboard.partials.addUserModal')
-@extends('dashboard.partials.chooseAdminModal')
+{{-- @extends('dashboard.partials.chooseAdminModal') --}}
 @endsection
