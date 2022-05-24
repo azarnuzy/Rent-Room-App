@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="formModalLabel">Form {{ $title }}</h5>
+                <h5 class="modal-title" id="formModalLabel">Form Tambah {{ $title }}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="text-align: left;">
@@ -11,11 +11,11 @@
                     <input type="hidden" name="room_id" id="room_id">
                     <div class="mb-3">
                         <label for="code" class="form-label">Kode Ruangan</label>
-                        <input type="text" class="form-control" id="code" name="code" required value="{{ old('code', $room->code) }}">
+                        <input type="text" class="form-control" id="code" name="code" required value="{{ old('code') }}">
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama Ruangan</label>
-                        <input type="text" class="form-control" id="name" name="name" required value="{{ old('name', $room->name) }}">
+                        <input type="text" class="form-control" id="name" name="name" required value="{{ old('name') }}">
                     </div>
                     <div class='mb-3'>
                         <label for='img' class='form-label'>Foto Ruangan</label>
@@ -29,16 +29,16 @@
                     <div class="mb-3 row">
                         <div class="col-6">
                             <label for="floor" class="form-label">Lantai</label>
-                            <input type="number" class="form-control" id="floor" name="floor" required value="{{ old('floor', $room->floor) }}">
+                            <input type="number" class="form-control" id="floor" name="floor" required value="{{ old('floor') }}">
                         </div>
                         <div class="col-6">
                             <label for="capacity" class="form-label">Kapasitas</label>
-                        <input type="number" class="form-control" id="capacity" name="capacity" required value="{{ old('capacity', $room->capacity) }}">
+                        <input type="number" class="form-control" id="capacity" name="capacity" required value="{{ old('capacity') }}">
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="building_id" class="form-label d-block">Gedung</label>
-                        <select class="form-select" aria-label="Default select example" name="building_id" id="building_id" required value="{{ old('building_id', $room->building_id) }}">
+                        <select class="form-select" aria-label="Default select example" name="building_id" id="building_id" required value="{{ old('building_id') }}">
                             <option selected disabled>Pilih Gedung</option>
                             @foreach ($buildings as $building)
                                 <option value="{{ $building->id }}">{{ $building->name }}</option>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="type" class="form-label">Tipe Ruangan</label>
-                        <select class="form-select" name="type" id="type" required value="{{ old('type', $room->type) }}">
+                        <select class="form-select" name="type" id="type" required value="{{ old('type')}}">
                             <option selected disabled>Pilih Tipe Ruangan</option>
                             <option value="Laboratorium">Laboratorium</option>
                             <option value="Ruang Kelas">Ruang Kelas</option>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">deskripsi ruangan</label>
-                        <textarea name="description" id="description" cols="30" rows="5" class="form-control" required  value="{{ old('description', $room->description) }}"></textarea>
+                        <textarea name="description" id="description" cols="30" rows="5" class="form-control" required>{{ old('description') }}</textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

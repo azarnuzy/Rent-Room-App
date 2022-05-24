@@ -19,7 +19,7 @@
     </button>
     @endif
   <div class="table-responsive">
-    <table class="table table-hover table-stripped table-bordered text-center">
+    <table class="table table-hover table-stripped table-bordered text-center" id="datatable">
       <thead class="table-info">
         <tr>
           <th scope="row">No.</th>
