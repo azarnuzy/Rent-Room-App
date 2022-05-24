@@ -36,7 +36,9 @@
           <th scope="row">Waktu Transaksi</th>
           <th scope="row">Kembalikan</th>
           <th scope="row">Status Pinjam</th>
-          <th scope="row">Action</th>
+          @if (auth()->user()->role_id <= 2)
+            <th scope="row">Action</th>
+          @endif
         </tr>
       </thead>
       <tbody>
@@ -79,10 +81,14 @@
             <td>{{ $rent->time_end_use }}</td>
             <td>{{ $rent->purpose }}</td>
             <td>{{ $rent->transaction_start }}</td>
-            @if(!is_null($rent->transaction_end))
-            <td>{{ $rent->transaction_end }}</td>
+            @if ($rent->status == "dipinjam")
+            <td><a href="/dashboard/rents/{{ $rent->id }}/endTransaction" class="btn btn-success" type="submit" style="padding: 2px 10px"><i class="bi bi-check fs-5"></i></a></td>
             @else
-            <td><a href="/dashboard/rents/endTransaction?id={{ $rent->id }}" class="btn btn-success" type="submit" style="padding: 2px 10px"><i class="bi bi-check fs-5"></i></a></td>
+              @if(!is_null($rent->transaction_end))
+                <td>{{ $rent->transaction_end }}</td>   
+              @else
+              <td>-</td>   
+              @endif 
             @endif
             <td>{{ $rent->status }}</td>
           </tr>
