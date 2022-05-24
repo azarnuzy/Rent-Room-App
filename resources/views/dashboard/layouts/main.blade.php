@@ -61,7 +61,24 @@
 {{-- <script src="/js/index.js"></script> --}}
     <script>
       $(document).ready(function () {
-        const table = $('#datatable')
+        $('#editRoom').on('click', function () {
+
+          const id = $(this).data('id');
+          const code = $(this).data('code');
+
+          $.ajax({
+            url: '/dashboard/rooms/' + code + '/edit',
+            data: {
+              id: id,
+              code: code,
+            },
+            type: 'get',
+            dataType: 'json',
+            success: function(data) {
+              console.log(data);
+            }
+          });
+        });
       });
     </script>
   </body>
