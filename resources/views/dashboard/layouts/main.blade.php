@@ -48,6 +48,18 @@
     <script src="/js/index.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+      $('#datatable').DataTable( {
+        columnDefs: [
+          {
+            targets: '_all',
+            className: 'dt-head-center'
+          }
+        ]
+      });
+      $('#datatable_length').css('text-align', 'left');
+      $('#datatable_info').css('text-align', 'left');
+    </script>
     {{-- Room Edit Modal --}}
     <script src="/js/editroom.js"></script>
     <script src="/js/edituser.js"></script>

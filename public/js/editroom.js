@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    $("#datatable").DataTable();
-
     $(".editroom").on("click", function () {
         const id = $(this).data("id");
         const code = $(this).data("code");

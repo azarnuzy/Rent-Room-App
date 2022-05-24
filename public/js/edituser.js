@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    $("#datatable").DataTable();
-
     $(".edituser").on("click", function () {
         const id = $(this).data("id");
         $.ajax({

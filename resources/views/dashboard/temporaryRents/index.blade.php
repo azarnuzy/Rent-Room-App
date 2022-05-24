@@ -5,7 +5,7 @@
     <h2 class="content-title text-center">Daftar {{$title}}</h2>
 <div class="card-body text-end">
   <div class="table-responsive">
-    <table class="table table-hover table-stripped table-bordered text-center" id="datatable">
+    <table class="table table-hover table-stripped table-bordered text-center dt-head-center" id="datatable">
       <thead class="table-info">
         <tr>
           <th scope="row">No.</th>
