@@ -25,8 +25,8 @@
             <th scope="row">{{ $loop->iteration }}</th scope="row">
               <td><a href="" class="text-decoration-none">{{ $rent->room->code }}</a></td>
             <td>{{ $rent->user->name }}</td>
-            <td>{{ $rent->time_start }}</td>
-            <td>{{ $rent->time_end }}</td>
+            <td>{{ $rent->time_start_use }}</td>
+            <td>{{ $rent->time_end_use }}</td>
             <td>{{ $rent->purpose }}</td>
             <td>{{ $rent->transaction_start }}</td>
             <td>{{ $rent->status }}</td>
