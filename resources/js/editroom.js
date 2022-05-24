@@ -1,3 +1,4 @@
 $(document).ready(function () {
-    $('#datatable').DataTable();
+    const table = $('#datatable');
+    
 });

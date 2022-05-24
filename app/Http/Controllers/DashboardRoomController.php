@@ -90,7 +90,7 @@ class DashboardRoomController extends Controller
      */
     public function edit(Room $room)
     {
-        //
+        return json_encode($room);
     }
 
     /**

@@ -35,7 +35,7 @@
             <td><a href="/dashboard/rooms/{{ $room->code }}" class="text-decoration-none" role="button">{{ $room->name }}</a></td>
             <td>{{ $room->code }}</td>
             <td style="font-size: 22px;">
-              <button type="submit" class="bi bi-pencil-square text-warning border-0" data-bs-toggle="modal" data-bs-target="#editRoom"></button>
+              <a href="/dashboard/rooms/{{ $room->code }}/edit" class="bi bi-pencil-square text-warning border-0" data-bs-toggle="modal" data-bs-target="#editRoom"></a>
               &nbsp;
               <form action="/dashboard/rooms/{{ $room->code }}" method="post" class="d-inline">
                 @method('delete')
