@@ -22,17 +22,26 @@
                     <div class="mb-3">
                         <label for="time_start" class="form-label">Mulai Pinjam</label>
                         <input type="datetime-local" class="form-control" id="time_start_use" 
-                        name="time_start_use" required>
+                        name="time_start_use"  
+                        value="{{ old('time_start_use')}}"
+                        required>
                     </div>
                     <div class="mb-3">
                         <label for="time_end" class="form-label">Selesai Pinjam</label>
                         <input type="datetime-local" class="form-control" id="time_end_use" 
-                        name="time_end_use" required>
+                        name="time_end_use" 
+                        value="{{ old('time_end_use')}}"
+                        required>
                     </div>
                     <div class="mb-3">
                         <label for="purpose" class="form-label">Tujuan</label>
-                        <input type="text" class="form-control" id="purpose" 
-                        name="purpose" required>
+                        <input type="text" class="form-control  @error('capacity') is-invalid @enderror" id="purpose" 
+                        name="purpose" value="{{ old('purpose')}}" required>
+                        @error('purpose')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

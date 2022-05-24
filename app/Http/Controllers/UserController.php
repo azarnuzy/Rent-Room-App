@@ -11,7 +11,7 @@ class UserController extends Controller
     {
         return view('dashboard.users.index', [
             'title' => 'User',
-            'users' => User::latest()->paginate(8)->withQueryString()
+            'users' => User::latest()->paginate(10)->withQueryString()
         ]);
     }
 }

@@ -50,11 +50,18 @@
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 
-    {{-- Room Edit Modal --}}
-    {{-- <script src="/js/editroom.js"></script> --}}
     <script>
       $(document).ready(function () {
         $('#datatable').DataTable();
+      });
+      $("#datatable_length").css({"float": "left"})
+      </script>
+
+{{-- Room Edit Modal --}}
+{{-- <script src="/js/index.js"></script> --}}
+    <script>
+      $(document).ready(function () {
+        const table = $('#datatable')
       });
     </script>
   </body>

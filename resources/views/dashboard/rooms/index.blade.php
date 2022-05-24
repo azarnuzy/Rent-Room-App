@@ -22,10 +22,10 @@
     <table class="table table-hover table-stripped table-bordered text-center" id="datatable">
       <thead class="table-info">
         <tr>
-          <th scope="row">No.</th>
-          <th scope="row">Nama Ruangan</th>
-          <th scope="row">Kode Ruangan</th>
-          <th scope="row">Action</th>
+          <th class="text-center" scope="row">No.</th>
+          <th class="text-center" scope="row">Nama Ruangan</th>
+          <th class="text-center" scope="row">Kode Ruangan</th>
+          <th class="text-center" scope="row">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -35,7 +35,7 @@
             <td><a href="/dashboard/rooms/{{ $room->code }}" class="text-decoration-none" role="button">{{ $room->name }}</a></td>
             <td>{{ $room->code }}</td>
             <td style="font-size: 22px;">
-              <a href="/dashboard/rooms/{{ $room->code }}/edit" class="bi bi-pencil-square text-warning border-0" data-bs-toggle="modal" data-bs-target="#editRoom"></a>
+              <a href="/dashboard/rooms/{{ $room->code }}/edit" class="bi bi-pencil-square text-warning border-0" data-id="{{ $room->code }}" data-bs-toggle="modal" data-bs-target="#editRoom"></a>
               &nbsp;
               <form action="/dashboard/rooms/{{ $room->code }}" method="post" class="d-inline">
                 @method('delete')
