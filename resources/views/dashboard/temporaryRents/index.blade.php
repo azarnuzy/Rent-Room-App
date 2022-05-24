@@ -23,7 +23,7 @@
         @foreach ($rents as $rent)
           <tr>
             <th scope="row">{{ $loop->iteration }}</th scope="row">
-              <td><a href="" class="text-decoration-none">{{ $rent->room->code }}</a></td>
+              <td><a href="/dashboard/rooms/{{ $rent->room->code }}" class="text-decoration-none">{{ $rent->room->code }}</a></td>
             <td>{{ $rent->user->name }}</td>
             <td>{{ $rent->time_start_use }}</td>
             <td>{{ $rent->time_end_use }}</td>
@@ -31,8 +31,8 @@
             <td>{{ $rent->transaction_start }}</td>
             <td>{{ $rent->status }}</td>
             <td>
-              <button class="btn btn-success mb-2" style="padding: 2px 10px">Setuju</button>
-              <button class="btn btn-danger mb-2" style="padding: 2px 10px">Tidak Setuju</button>
+              <a href="/dashboard/temporaryRents/{{ $rent->id }}/acceptRents" class="btn btn-success mb-2" style="padding: 2px 10px"><i class="bi bi-check-lg"></i></a>
+              <a href="/dashboard/temporaryRents/{{ $rent->id }}/declineRents" class="btn btn-danger mb-2" style="padding: 2px 10px"><i class="bi bi-x-lg"></i></a>
             </td>
           </tr>
         @endforeach

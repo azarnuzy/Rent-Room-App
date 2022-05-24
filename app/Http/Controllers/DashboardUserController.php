@@ -18,7 +18,7 @@ class DashboardUserController extends Controller
         return view('dashboard.users.index', [
             'title' => 'User',
             'roles' => Role::all(),
-            'users' => User::latest()->paginate(10)->withQueryString(),
+            'users' => User::all(),
             'admins' => User::where('role_id', 2)->get(),
         ]);
     }
@@ -75,7 +75,7 @@ class DashboardUserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return json_encode($user);
     }
 
     /**
@@ -87,7 +87,22 @@ class DashboardUserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        // return $request;
+        $rules = [
+            'name' => 'required|max:100',
+            'email' => 'required|email:dns',
+            'role_id' => 'required'
+        ];
+
+        if ($request->nomor_induk != $user->nomor_induk) {
+            $rules['nomor_induk'] = 'required|min:7|max:18|unique:users,nomor_induk';
+        }
+
+        $validatedData = $request->validate($rules);
+        User::where('id', $user->id)
+            ->update($validatedData);
+
+        return redirect('/dashboard/users')->with('userSuccess', 'Data ruangan berhasil diubah');
     }
 
     /**
@@ -100,5 +115,16 @@ class DashboardUserController extends Controller
     {
         User::destroy($user->id);
         return redirect('/dashboard/users')->with('deleteUser', 'Hapus data user berhasil');
+    }
+
+    public function makeAdmin($id)
+    {
+        $userData = [
+            'role_id' => 2,
+        ];
+
+        User::where('id', $id)->update($userData);
+
+        return redirect('/dashboard/admin')->with('adminSuccess', 'Data admin berhasil ditambahkan');
     }
 }

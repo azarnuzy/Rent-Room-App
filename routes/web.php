@@ -33,15 +33,23 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::post('/logout', [LoginController::class, 'logout']);
 
+Route::get('dashboard/rents/{id}/endTransaction', [DashboardRentController::class, 'endTransaction'])->middleware('auth');
+
 Route::resource('dashboard/rents', DashboardRentController::class)->middleware('auth');
 
 Route::resource('dashboard/rooms', DashboardRoomController::class)->middleware('auth');
+
+Route::resource('dashboard/users/{id}/makeAdmin', [DashboardUserController::class, 'makeAdmin'])->middleware('auth');
 
 Route::resource('dashboard/users', DashboardUserController::class)->middleware('auth');
 
 Route::resource('dashboard/admin', DashboardAdminController::class)->middleware('auth');
 
 Route::get('/dashboard/temporaryRents', [TemporaryRentController::class, 'index'])->middleware('auth');
+
+Route::get('/dashboard/temporaryRents/{id}/acceptRents', [TemporaryRentController::class, 'acceptRents'])->middleware('auth');
+
+Route::get('/dashboard/temporaryRents/{id}/declineRents', [TemporaryRentController::class, 'declineRents'])->middleware('auth');
 
 Route::get('/help', function () {
     return view('help', [

@@ -29,7 +29,7 @@
           <td>{{$admin->nomor_induk}} </td>
           <td>{{$admin->email}} </td>
           <td style="font-size: 22px;">
-            <a href=""><i class="bi bi-pencil-square text-warning"></i></a>&nbsp;
+            <a href="/dashboard/users/{{ $admin->id }}/edit"><i class="bi bi-pencil-square text-warning"></i></a>&nbsp;
             <form action="/dashboard/admin/{{ $admin->id }}" method="post" class="d-inline">
               @method('delete')
               @csrf

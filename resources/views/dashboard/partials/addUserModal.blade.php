@@ -8,7 +8,7 @@
             <div class="modal-body" style="text-align: left;">
                 <form action="/dashboard/admin" method="post">
                     @csrf
-                    <input type="hidden" name="room_id" id="room_id">
+                    <input type="hidden" name="id" id="id">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama Lengkap</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" required>

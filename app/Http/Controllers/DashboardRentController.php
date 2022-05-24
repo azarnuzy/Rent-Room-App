@@ -99,7 +99,26 @@ class DashboardRentController extends Controller
      */
     public function destroy(Rent $rent)
     {
-        Room::destroy($rent->id);
+        Rent::destroy($rent->id);
         return redirect('/dashboard/rents')->with('deleteRent', 'Data peminjaman berhasil dihapus');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Rent  $rent
+     * @return \Illuminate\Http\Response
+     */
+    public function endTransaction($id)
+    {
+        $transaction = [
+            'transaction_end' => now(),
+            'status' => 'selesai',
+        ];
+
+        Rent::where('id', $id)->update($transaction);
+
+        return redirect('/dashboard/rents');
     }
 }

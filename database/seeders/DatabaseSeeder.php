@@ -439,7 +439,29 @@ class DatabaseSeeder extends Seeder
             'time_start_use' => '2022-05-15 13:30:00',
             'time_end_use' => '2022-05-15 17:00:00',
             'purpose' => 'rapat',
+            'status' => 'dipinjam',
+        ]);
+
+        Rent::create([
+            'room_id' => mt_rand(1, 15),
+            'user_id' => mt_rand(1, 5),
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-15 13:30:00',
+            'time_end_use' => '2022-05-15 17:00:00',
+            'purpose' => 'rapat',
             'status' => 'pending',
+        ]);
+
+        Rent::create([
+            'room_id' => mt_rand(1, 15),
+            'user_id' => mt_rand(1, 5),
+            'transaction_start' => now(),
+            'transaction_end' => null,
+            'time_start_use' => '2022-05-15 13:30:00',
+            'time_end_use' => '2022-05-15 17:00:00',
+            'purpose' => 'rapat',
+            'status' => 'dipinjam',
         ]);
     }
 }
