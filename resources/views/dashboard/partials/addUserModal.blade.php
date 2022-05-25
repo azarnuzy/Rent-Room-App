@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="text-align: left;">
-                <form action="/dashboard/admin" method="post">
+                <form action="/dashboard/users" method="post">
                     @csrf
                     <input type="hidden" name="id" id="id">
                     <div class="mb-3">
@@ -45,20 +45,15 @@
                         </div>
                         @enderror
                     </div>
-                    @if(Request::is('dashboard/admin'))
-                    <input type="hidden" name="role_id" id="role_id" value="{{ 2 }}">
-                    @else
                     <div class="mb-3">
                         <label for="role_id" class="form-label d-block">User Role</label>
                         <select class="form-select" aria-label="Default select example" name="role_id" id="role_id" value="{{ old('role_id') }}" required>
-                            
                             <option selected disabled>Pilih Role</option>
                             @foreach ($roles as $role)
                                 <option value="{{ $role->id }}">{{ $role->name }}</option>
                             @endforeach
                         </select>
                     </div>
-                    @endif
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Tambah</button>

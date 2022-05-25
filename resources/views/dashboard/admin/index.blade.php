@@ -7,7 +7,7 @@
   <a href="/dashboard/users" type="button" class="mb-3 btn button btn-primary">
     Pilih dari User
   </a>
-  <button type="button" class="mb-3 btn button btn-primary" data-bs-toggle="modal" data-bs-target="#addUser">
+  <button type="button" class="mb-3 btn button btn-primary" data-bs-toggle="modal" data-bs-target="#addAdmin">
     Tambah Data Baru
   </button>
   <div class="table-responsive">
@@ -39,7 +39,7 @@
   </div>
 </div>
 </div>
-@extends('dashboard.partials.addUserModal')
+@extends('dashboard.partials.addAdminModal')
 @extends('dashboard.partials.editUserModal')
 {{-- @extends('dashboard.partials.chooseAdminModal') --}}
 @endsection
