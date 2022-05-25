@@ -63,5 +63,6 @@
     {{-- Room Edit Modal --}}
     <script src="/js/editroom.js"></script>
     <script src="/js/edituser.js"></script>
+    <script src="/js/editadmin.js"></script>
   </body>
 </html>

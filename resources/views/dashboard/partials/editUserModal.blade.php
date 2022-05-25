@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="text-align: left;">
-                <form action="/dashboard/users/{{ $user->id }}" method="post" id="editformuser">
+                <form action="#" method="post" id="editformuser">
                     @method('put')
                     @csrf
                     <input type="hidden" name="id" id="id">

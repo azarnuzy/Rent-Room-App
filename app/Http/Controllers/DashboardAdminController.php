@@ -74,7 +74,7 @@ class DashboardAdminController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return json_encode($user);
     }
 
     /**
@@ -86,7 +86,21 @@ class DashboardAdminController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $rules = [
+            'name' => 'required|max:100',
+            'email' => 'required|email:dns',
+            'role_id' => 'required'
+        ];
+
+        if ($request->nomor_induk != $user->nomor_induk) {
+            $rules['nomor_induk'] = 'required|min:7|max:18|unique:users,nomor_induk';
+        }
+
+        $validatedData = $request->validate($rules);
+        User::where('id', $user->id)
+            ->update($validatedData);
+
+        return redirect('/dashboard/admin')->with('adminSuccess', 'Data admin berhasil diubah');
     }
 
     /**

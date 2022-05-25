@@ -102,7 +102,7 @@ class DashboardUserController extends Controller
         User::where('id', $user->id)
             ->update($validatedData);
 
-        return redirect('/dashboard/users')->with('userSuccess', 'Data ruangan berhasil diubah');
+        return redirect('/dashboard/users')->with('userSuccess', 'Data user berhasil diubah');
     }
 
     /**
