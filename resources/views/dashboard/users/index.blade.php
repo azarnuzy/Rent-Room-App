@@ -20,7 +20,7 @@
     Tambah User
   </button>
   <div class="table-responsive">
-    <table class="table table-hover table-stripped table-bordered text-center" id="datatable">
+    <table class="table table-hover table-stripped table-bordered text-center">
       <thead class="table-info">
         <tr>
           <th scope="row">No.</th>
@@ -52,6 +52,9 @@
         @endforeach
       </tbody>
     </table>
+  </div>
+  <div class="d-flex justify-content-end">
+    {{ $users->links() }}
   </div>
 </div>
 </div>

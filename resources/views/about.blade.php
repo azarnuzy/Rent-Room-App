@@ -7,7 +7,7 @@
       <div class="hero-description text-center">
           <h2>TENTANG SIMANUK</h2>
           <p>
-            Aplikasi <span><b>Sistem Informasi Peminjaman Ruangan di Lingkungan Kampus (SiManuk)</b></span> merupakan aplikasi real-time berbasis website. 
+            Aplikasi <span><b>Sistem Informasi Peminjaman Ruangan di (SiManuk)</b></span> merupakan aplikasi real-time berbasis website. 
             Aplikasi ini menampilkan ketersediaan ruangan serta informasi mendetail lainnya mengenai ruangan yang sedang dan akan dipinjam dalam suatu gedung. 
             Aplikasi ini ditujukan bagi internal (dosen dan mahasiswa) dan eksternal (tamu/guest).
           </p>
@@ -58,7 +58,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Zakaria">
+            <img class="card-img-top rounded-circle" src="img/jek.jpg" alt="Zakaria">
             <h5 class="text-center mt-2">M. Zakaria S.</h5>
             <p class="text-center">2007993</p>
           </div>
@@ -67,7 +67,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Rahma">
+            <img class="card-img-top rounded-circle" src="img/rahma.jpeg" alt="Rahma">
             <h5 class="text-center mt-2">Rahma Maulida</h5>
             <p class="text-center">2003688</p>
           </div>
@@ -76,7 +76,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Azar">
+            <img class="card-img-top rounded-circle" src="img/azar.jpg" alt="Azar">
             <h5 class="text-center mt-2">M. Azar Nuzy</h5>
             <p class="text-center">2004191</p>
           </div>
@@ -85,7 +85,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Sekar">
+            <img class="card-img-top rounded-circle" src="img/sekar.jpg" alt="Sekar">
             <h5 class="text-center mt-2">Sekar Madu K.</h5>
             <p class="text-center">2007703</p>
           </div>
@@ -94,7 +94,7 @@
       <div class="col-sm">
         <div class="card">
           <div class="card-body">
-            <img class="card-img-top rounded-circle" src="img/mark.jpg" alt="Ahmad">
+            <img class="card-img-top rounded-circle" src="img/ahmad.jpg" alt="Ahmad">
             <h5 class="text-center mt-2">Hilman Ahmad R.</h5>
             <p class="text-center">2007325</p>
           </div>

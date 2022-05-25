@@ -27,7 +27,7 @@
     </button>
     @endif
   <div class="table-responsive">
-    <table class="table table-hover table-stripped table-bordered text-center dt-head-center" id="datatable">
+    <table class="table table-hover table-stripped table-bordered text-center dt-head-center">
       <thead class="table-info">
         <tr>
           <th class="text-center" scope="row">No.</th>
@@ -59,6 +59,9 @@
         @endforeach
       </tbody>
     </table>
+  </div>
+  <div class="d-flex justify-content-end">
+    {{ $rooms->links() }}
   </div>
 </div>
 </div>

@@ -18,7 +18,7 @@ class DashboardUserController extends Controller
         return view('dashboard.users.index', [
             'title' => 'User',
             'roles' => Role::all(),
-            'users' => User::all(),
+            'users' => User::latest()->paginate(10),
             'admins' => User::where('role_id', 2)->get(),
         ]);
     }
