@@ -1,64 +1,80 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<div id="top"></div>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<div align="center">
+  <a href="https://github.com/azarnuzy/Rent-Room-App">
+    <img src="public/img/logotext.png" alt="Logo" width="300">
+  </a>
 
-## About Laravel
+  <h3 align="center">SiManuk (Sistem Informasi Peminjaman Ruangan Kampus)</h3>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+  <p align="center">
+    Rent Room Application
+    <br />
+    <a href="https://github.com/azarnuzy/Rent-Room-App"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://simanuk.c120.me/">View Demo</a>
+    ·
+    <a href="https://github.com/azarnuzy/Rent-Room-App/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/azarnuzy/Rent-Room-App/issues">Request Feature</a>
+  </p>
+</div>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<!-- ABOUT THE PROJECT -->
+## About The Project
+<div align="center">
+    
+  
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/81504019/173018483-1f6de65f-7804-4cc7-a037-1ba258bda65f.gif)
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/81504019/173018537-71abb256-74f8-43ee-afb6-f595d6903da9.gif)
+</div>
+Sistem Informasi Peminjaman Ruangan Kampus (SiManuk) is a real-time website-based application. SiManuk provides room availability as well as other detailed information about the rooms being and will be provided in a building. The target users of SiManuk are internal (lecturers and students) and external (guests/guests).
+SiManuk was created with the aim of knowing what rooms are being and will be used on the schedule provided on that day. In addition, SiManuk also helps new students or guests from outside the campus who do not even know the location of a room in the building. Information such as the person in charge of borrowing a room, the room used, the intended use of the room, the original schedule of the room, and the length of time the room can be viewed can also be viewed through the application. Of course, this makes it easier for the accessors so they don't have to check any particular room.
+Our reason for developing this project is because there are no similar projects that have been or are being developed in the FPMIPA-C UPI building.
 
-## Learning Laravel
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Built With
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-## Laravel Sponsors
+* [Laravel](https://laravel.com)
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+* [XAMPP](https://www.apachefriends.org/download.html)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+<!-- GETTING STARTED -->
+## Getting Started
 
-## Contributing
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Prerequisites and Installation
 
-## Code of Conduct
+This is an example of how to list things you need to use the software and how to install them.
+* Install Composer
+* Create project laravel on your directory project in terminal
+  ```
+    composer create project laravel/laravel 
+  ```
+* Create database to store migration from the project
+* Run migration on directory project terminal
+  ```
+    php artisan migrate:fresh --seed
+  ```
+* Run project on directory project terminal
+  ``` 
+    php artisan serve
+  ```
+  
+### Usage
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+To login the dashboard you can use this role:
+- Admin : sekar@gmail.com (pass: sekar)
+- Dosen/Ketua Kelompok : rahma@gmail.com (pass: rahma)
+- Mahasiswa : azar@gmail.com (pass: azar)
