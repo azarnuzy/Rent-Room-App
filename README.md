@@ -63,6 +63,7 @@ This is an example of how to list things you need to use the software and how to
     composer create project laravel/laravel 
   ```
 * Create database to store migration from the project
+* modify the code according to this repository
 * Run migration on directory project terminal
   ```
     php artisan migrate:fresh --seed
